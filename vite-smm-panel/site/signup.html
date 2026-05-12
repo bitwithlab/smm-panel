@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EngageFlow — Create account</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+body{background:var(--paper)}
+.wrap{max-width:1080px;margin:0 auto;padding:3rem 2rem 5rem}
+.wrap .logo{margin-bottom:2rem}
+.steps{display:flex;gap:.75rem;margin-bottom:2.5rem;font-family:'JetBrains Mono',monospace;font-size:.72rem}
+.stp{padding:.4rem .8rem;border:1.5px solid var(--ink);border-radius:100px;font-weight:600;background:var(--cream)}
+.stp.active{background:var(--accent)}
+.stp.done{background:var(--lime)}
+.stp.done::before{content:"✓ ";color:var(--ink)}
+
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2.5rem}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.form-card{background:var(--cream);border:2px solid var(--ink);border-radius:14px;padding:2rem;box-shadow:6px 6px 0 var(--ink)}
+.form-card h1{font-family:'Fraunces',serif;font-size:2rem;font-weight:500;letter-spacing:-.02em;margin-bottom:.4rem}
+.form-card .sub{color:var(--muted);font-size:.92rem;margin-bottom:2rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+
+.plan-pick{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.5rem}
+.plan-opt{border:1.5px solid var(--ink);border-radius:10px;padding:1rem;background:var(--cream);cursor:pointer;position:relative}
+.plan-opt.on{background:var(--accent)}
+.plan-opt .n{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600}
+.plan-opt .p{font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:600;margin-top:.2rem}
+.plan-opt .d{font-size:.72rem;color:var(--muted);margin-top:.2rem}
+
+.summary{position:sticky;top:2rem;background:var(--ink);color:var(--cream);border-radius:14px;padding:1.75rem;align-self:start}
+.summary h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin-bottom:1rem;padding-bottom:.8rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.sum-line{display:flex;justify-content:space-between;padding:.55rem 0;font-size:.88rem;border-bottom:1px dashed rgba(255,255,255,.12)}
+.sum-line:last-of-type{border-bottom:none}
+.sum-line .v{font-family:'JetBrains Mono',monospace}
+.sum-total{display:flex;justify-content:space-between;padding-top:1rem;margin-top:.5rem;border-top:1px solid rgba(255,255,255,.3);font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700}
+.sum-total .v{color:var(--lime)}
+.trial-note{margin-top:1rem;padding:.8rem;background:rgba(212,255,58,.1);border:1px solid rgba(212,255,58,.3);border-radius:8px;font-size:.8rem;color:var(--lime)}
+.trial-note b{color:var(--cream)}
+
+.reassure{display:flex;gap:.5rem;margin-top:1.5rem;flex-wrap:wrap}
+.reassure span{font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:.3rem .65rem;border:1px solid rgba(255,255,255,.2);border-radius:100px;color:rgba(255,255,255,.7)}
+</style>
+</head>
+<body class="grain">
+
+<div class="wrap">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow</a>
+
+  <div class="steps">
+    <div class="stp done">Account</div>
+    <div class="stp active">Workspace</div>
+    <div class="stp">Payment</div>
+    <div class="stp">Connect</div>
+  </div>
+
+  <div class="grid">
+    <div class="form-card">
+      <h1>Create your workspace.</h1>
+      <p class="sub">Seven days free, no card required. You'll connect social accounts in the last step.</p>
+
+      <div class="field"><label>Your name</label><input class="input" value="Nusrat Jahan"></div>
+      <div class="row">
+        <div class="field"><label>Work email</label><input class="input" value="nusrat@fashionhouse.bd"></div>
+        <div class="field"><label>Phone (bKash / Nagad)</label><input class="input" value="+880 17 0000 0000"></div>
+      </div>
+      <div class="field"><label>Workspace name</label><input class="input" value="Rahim Fashion House">
+        <div class="hint">You can change this later. It shows in your reports and team invites.</div>
+      </div>
+      <div class="field"><label>Password</label><input class="input" type="password" value="••••••••••">
+        <div class="hint">At least 10 characters. One number, one symbol.</div>
+      </div>
+
+      <div class="dashed"></div>
+      <div class="field"><label>Pick a plan to start with</label>
+        <div class="plan-pick">
+          <div class="plan-opt"><div class="n">Basic</div><div class="p">৳99/mo</div><div class="d">10 posts · 1 platform</div></div>
+          <div class="plan-opt on"><div class="n">Standard ★</div><div class="p">৳199/mo</div><div class="d">20 posts · all platforms</div></div>
+          <div class="plan-opt"><div class="n">Ultra</div><div class="p">৳399/mo</div><div class="d">30 posts · full intel</div></div>
+        </div>
+      </div>
+
+      <div class="field"><label><input type="checkbox" checked style="margin-right:.4rem"> I agree to the <a href="#" style="color:var(--accent);font-weight:600">Terms of Service</a> and <a href="#" style="color:var(--accent);font-weight:600">Acceptable Use Policy</a></label></div>
+
+      <button class="btn primary full lg" style="margin-top:1rem">Continue to payment →</button>
+      <p style="text-align:center;margin-top:1rem;font-size:.88rem;color:var(--muted)">Already have an account? <a href="login.html" style="color:var(--ink);font-weight:600">Sign in</a></p>
+    </div>
+
+    <div class="summary">
+      <h3>Your order</h3>
+      <div class="sum-line"><span>Standard plan</span><span class="v">৳199/mo</span></div>
+      <div class="sum-line"><span>Trial period</span><span class="v">7 days free</span></div>
+      <div class="sum-line"><span>Billing starts</span><span class="v">May 1, 2026</span></div>
+      <div class="sum-line"><span>First charge</span><span class="v">৳199.00</span></div>
+      <div class="sum-total"><span>Due today</span><span class="v">৳0.00</span></div>
+      <div class="trial-note"><b>You won't be charged</b> until the trial ends. Cancel any time in settings.</div>
+      <div class="reassure">
+        <span>🔒 bank-grade TLS</span>
+        <span>🇧🇩 bKash / Nagad</span>
+        <span>↩ cancel anytime</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

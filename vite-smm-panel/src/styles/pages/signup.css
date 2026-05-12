@@ -1,0 +1,181 @@
+.p-signup {
+  background: var(--paper);
+  min-height: 100vh;
+}
+.p-signup .wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+.p-signup .wrap .logo {
+  margin-bottom: 2rem;
+}
+.p-signup .steps {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+}
+.p-signup .stp {
+  padding: 0.4rem 0.8rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  font-weight: 600;
+  background: var(--cream);
+}
+.p-signup .stp.active {
+  background: var(--accent);
+}
+.p-signup .stp.done {
+  background: var(--lime);
+}
+.p-signup .stp.done::before {
+  content: '✓ ';
+  color: var(--ink);
+}
+
+.p-signup .grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+}
+@media (max-width: 900px) {
+  .p-signup .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.p-signup .form-card {
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.p-signup .form-card h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.p-signup .form-card .sub {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 2rem;
+}
+.p-signup .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .p-signup .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.p-signup .plan-pick {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.p-signup .plan-opt {
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 1rem;
+  background: var(--cream);
+  cursor: pointer;
+  position: relative;
+}
+.p-signup .plan-opt.on {
+  background: var(--accent);
+}
+.p-signup .plan-opt .n {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.p-signup .plan-opt .p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+.p-signup .plan-opt .d {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.p-signup .summary {
+  position: sticky;
+  top: 2rem;
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: 14px;
+  padding: 1.75rem;
+  align-self: start;
+}
+.p-signup .summary h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.p-signup .sum-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55rem 0;
+  font-size: 0.88rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+}
+.p-signup .sum-line:last-of-type {
+  border-bottom: none;
+}
+.p-signup .sum-line .v {
+  font-family: 'JetBrains Mono', monospace;
+}
+.p-signup .sum-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.p-signup .sum-total .v {
+  color: var(--lime);
+}
+.p-signup .trial-note {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: rgba(212, 255, 58, 0.1);
+  border: 1px solid rgba(212, 255, 58, 0.3);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--lime);
+}
+.p-signup .trial-note b {
+  color: var(--cream);
+}
+
+.p-signup .reassure {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.p-signup .reassure span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  color: rgba(255, 255, 255, 0.7);
+}

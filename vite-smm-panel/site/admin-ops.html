@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — Admin · Operations</title><link rel="stylesheet" href="shared.css">
+<style>
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem}
+@media(max-width:900px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+@media(max-width:900px){.grid-2{grid-template-columns:1fr}}
+.sys-item{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0;border-bottom:1px dashed var(--line-2)}
+.sys-item:last-child{border-bottom:none}
+.sys-name{font-weight:600;font-size:.92rem}
+.sys-sub{font-size:.74rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:.15rem}
+.mrr-chart{height:200px;background:var(--paper);border:1.5px dashed var(--line-2);border-radius:8px;padding:1rem;display:flex;align-items:flex-end;gap:.5rem}
+.mrr-chart .col{flex:1;background:linear-gradient(180deg,var(--accent),var(--accent-ink));border-radius:3px 3px 0 0}
+.mrr-chart .col.hi{background:linear-gradient(180deg,var(--lime),#a6cc2b)}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow <span class="chip" style="font-size:.6rem;margin-left:.3rem;background:var(--ink);color:var(--cream);border-color:var(--ink)">Admin</span></a>
+<div class="sb-group">Platform</div>
+<a href="admin-users.html" class="sb-item"><span class="sb-ico">◉</span>Users<span class="chip" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">2.4K</span></a>
+<a href="admin-compliance.html" class="sb-item"><span class="sb-ico">⚠</span>Compliance<span class="chip accent" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">4</span></a>
+<a href="admin-ops.html" class="sb-item active"><span class="sb-ico">◆</span>Operations</a>
+<div class="sb-group">Revenue</div>
+<a href="admin-ops.html" class="sb-item"><span class="sb-ico">৳</span>Revenue</a>
+<a href="admin-ops.html" class="sb-item"><span class="sb-ico">☰</span>Audit log</a>
+<div class="sb-foot"><div class="sb-avatar" style="background:var(--ink);color:var(--accent)">A</div><div><div style="font-weight:600">Arif Hasan</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Platform admin</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Platform</span><span class="sep">/</span><b>Operations</b></div>
+<div class="app-search">🔍<input placeholder="Search services…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><button class="btn sm">Status page</button><button class="btn sm primary">Page on-call</button></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>Operations</h1><p>System health, infrastructure, and revenue at a glance.</p></div></div>
+
+<div class="kpi-row">
+<div class="stat lime"><div class="stat-lbl">Uptime · 30d</div><div class="stat-num">99.82%</div><div class="stat-delta up">SLA 99.5% ✓</div></div>
+<div class="stat accent"><div class="stat-lbl">MRR</div><div class="stat-num">৳4.82L</div><div class="stat-delta up">▲ ৳82K</div></div>
+<div class="stat"><div class="stat-lbl">Avg response</div><div class="stat-num">284ms</div><div class="stat-delta up">p95 812ms</div></div>
+<div class="stat dark"><div class="stat-lbl">Cost / customer</div><div class="stat-num">৳28</div><div class="stat-delta">Target ≤৳40</div></div>
+</div>
+
+<div class="grid-2">
+<div class="card">
+<div class="card-title">Service health</div>
+<div class="card-sub">Live probe · updated 12s ago</div>
+<div class="divider"></div>
+<div class="sys-item"><div><div class="sys-name">Scheduler · scan + dispatch</div><div class="sys-sub">AWS Mumbai · 3 nodes · 12k jobs/hr</div></div><span class="chip dot">Operational</span></div>
+<div class="sys-item"><div><div class="sys-name">Reply worker pool</div><div class="sys-sub">8 workers · 94% utilization</div></div><span class="chip dot warn">Busy</span></div>
+<div class="sys-item"><div><div class="sys-name">Residential proxy gateway</div><div class="sys-sub">12,400 IPs · 96% clean</div></div><span class="chip dot">Operational</span></div>
+<div class="sys-item"><div><div class="sys-name">OpenAI · comment generator</div><div class="sys-sub">gpt-4 · avg 1.8s · ৳0.42/req</div></div><span class="chip dot">Operational</span></div>
+<div class="sys-item"><div><div class="sys-name">SSLCommerz payment gateway</div><div class="sys-sub">bKash · Nagad · card</div></div><span class="chip dot">Operational</span></div>
+<div class="sys-item"><div><div class="sys-name">Postgres primary</div><div class="sys-sub">24 GB · p95 38ms</div></div><span class="chip dot">Operational</span></div>
+</div>
+
+<div class="card">
+<div class="card-title">MRR · last 6 months</div>
+<div class="card-sub">Recurring revenue trend</div>
+<div class="divider"></div>
+<div class="mrr-chart">
+<div class="col" style="height:14%"></div>
+<div class="col" style="height:22%"></div>
+<div class="col" style="height:38%"></div>
+<div class="col" style="height:52%"></div>
+<div class="col" style="height:74%"></div>
+<div class="col hi" style="height:92%"></div>
+</div>
+<div style="display:flex;justify-content:space-between;margin-top:.5rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)">
+<span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+</div>
+<div style="margin-top:1rem;display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;font-size:.82rem">
+<div><div style="font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700">৳4.82L</div><div style="color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.72rem">MRR · Apr</div></div>
+<div><div style="font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700">৳31.9L</div><div style="color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.72rem">YTD revenue</div></div>
+<div><div style="font-family:'Fraunces',serif;font-size:1.2rem;font-weight:700">৳2,786</div><div style="color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.72rem">Avg LTV</div></div>
+</div>
+</div>
+</div>
+
+<div class="grid-2">
+<div class="card">
+<div class="card-title">Plan mix</div>
+<div class="card-sub">Distribution of paying users</div>
+<div class="divider"></div>
+<table class="tbl compact">
+<thead><tr><th>Plan</th><th>Users</th><th>Share</th><th>MRR contribution</th></tr></thead>
+<tbody>
+<tr><td>Basic · ৳99</td><td>842</td><td>46%</td><td>৳83,358</td></tr>
+<tr><td>Standard · ৳199</td><td>871</td><td>47%</td><td>৳1,73,329</td></tr>
+<tr><td>Ultra · ৳399</td><td>122</td><td>7%</td><td>৳48,678</td></tr>
+<tr><td>Agency · ৳2,499</td><td>12</td><td>0.6%</td><td>৳29,988</td></tr>
+<tr style="background:var(--paper-2)"><td><b>Total</b></td><td><b>1,847</b></td><td><b>100%</b></td><td><b>৳3,35,353</b></td></tr>
+</tbody></table>
+</div>
+
+<div class="card">
+<div class="card-title">Cost breakdown</div>
+<div class="card-sub">Monthly infra · 1,847 paying customers</div>
+<div class="divider"></div>
+<table class="tbl compact">
+<thead><tr><th>Item</th><th>Cost</th><th>%</th></tr></thead>
+<tbody>
+<tr><td>Cloud servers (AWS/DO)</td><td>৳18,400</td><td>4.9%</td></tr>
+<tr><td>Residential proxy pool</td><td>৳28,200</td><td>7.6%</td></tr>
+<tr><td>OpenAI · AI comments</td><td>৳11,700</td><td>3.1%</td></tr>
+<tr><td>Payment gateway fees</td><td>৳10,060</td><td>2.7%</td></tr>
+<tr><td>SMS + email</td><td>৳3,200</td><td>0.9%</td></tr>
+<tr><td>Team (salaries)</td><td>৳2,20,000</td><td>59%</td></tr>
+<tr><td>Marketing</td><td>৳80,000</td><td>21%</td></tr>
+<tr style="background:var(--paper-2)"><td><b>Total</b></td><td><b>৳3,71,560</b></td><td><b>100%</b></td></tr>
+</tbody></table>
+</div>
+</div>
+
+</div></div></div></body></html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — Targets</title><link rel="stylesheet" href="shared.css">
+<style>
+.toolbar{display:flex;gap:.6rem;margin-bottom:1.25rem;flex-wrap:wrap;align-items:center}
+.toolbar .chip{cursor:pointer}
+.toolbar .sp{flex:1}
+.grid-targets{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media(max-width:1100px){.grid-targets{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.grid-targets{grid-template-columns:1fr}}
+.t-card{background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.t-head{padding:1.1rem;display:flex;gap:.85rem;align-items:center;border-bottom:1px dashed var(--line-2)}
+.t-head .plat{width:44px;height:44px;font-size:1.1rem}
+.t-body{padding:1.1rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.row{display:flex;justify-content:space-between;font-size:.85rem}
+.row .k{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:.78rem}
+.row .v{font-weight:600}
+.t-foot{border-top:1px dashed var(--line-2);padding:.7rem 1.1rem;display:flex;justify-content:space-between;align-items:center;background:var(--paper-2)}
+.add-card{border:2px dashed var(--ink);background:transparent;display:grid;place-items:center;min-height:260px;border-radius:12px;font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;color:var(--muted);cursor:pointer}
+.add-card:hover{background:var(--lime);color:var(--ink)}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow</a>
+<div class="sb-group">Workspace</div>
+<a href="app-overview.html" class="sb-item"><span class="sb-ico">◆</span>Overview</a>
+<a href="app-targets.html" class="sb-item active"><span class="sb-ico">◎</span>Targets</a>
+<a href="app-queue.html" class="sb-item"><span class="sb-ico">⎘</span>Response queue<span class="chip accent" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">7</span></a>
+<a href="app-comments.html" class="sb-item"><span class="sb-ico">✎</span>Comment library</a>
+<div class="sb-group">Insights</div>
+<a href="app-analytics.html" class="sb-item"><span class="sb-ico">◫</span>Analytics</a>
+<a href="app-activity.html" class="sb-item"><span class="sb-ico">☰</span>Activity log</a>
+<div class="sb-group">Account</div>
+<a href="app-billing.html" class="sb-item"><span class="sb-ico">৳</span>Billing</a>
+<a href="app-settings.html" class="sb-item"><span class="sb-ico">⚙</span>Settings</a>
+<div class="sb-foot"><div class="sb-avatar">N</div><div><div style="font-weight:600">Nusrat J.</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Standard plan</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Workspace</span><span class="sep">/</span><b>Targets</b></div>
+<div class="app-search">🔍<input placeholder="Search accounts…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><a class="btn sm primary">+ Connect account</a></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>Target profiles</h1><p>Connected social accounts we're monitoring for first-hour engagement.</p></div><div class="page-head-actions"><button class="btn ghost sm">Import CSV</button><a class="btn primary sm">+ Add target</a></div></div>
+
+<div class="toolbar">
+<span class="chip solid">All · 4</span><span class="chip">Facebook · 1</span><span class="chip">Instagram · 2</span><span class="chip">X/Twitter · 1</span>
+<div class="sp"></div>
+<span class="chip dot">Active · 3</span><span class="chip dot idle">Paused · 1</span>
+</div>
+
+<div class="grid-targets">
+
+<div class="t-card">
+<div class="t-head"><div class="plat fb">f</div><div style="flex:1"><div style="font-weight:600">@rahimfashionhouse</div><div style="font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Facebook page · 24.6K followers</div></div><span class="chip dot">Active</span></div>
+<div class="t-body">
+<div class="row"><span class="k">Last post</span><span class="v">42 min ago</span></div>
+<div class="row"><span class="k">Posts this month</span><span class="v">5 / 20</span></div>
+<div class="row"><span class="k">Avg first-hour</span><span class="v">68% velocity</span></div>
+<div class="row"><span class="k">Priority tag</span><span class="chip accent" style="font-size:.7rem">Primary</span></div>
+</div>
+<div class="t-foot"><span class="mono" style="font-size:.72rem;color:var(--muted)">Connected Apr 1 · OAuth</span><div style="display:flex;gap:.4rem"><button class="btn sm ghost">Pause</button><button class="btn sm">Manage</button></div></div>
+</div>
+
+<div class="t-card">
+<div class="t-head"><div class="plat ig">◉</div><div style="flex:1"><div style="font-weight:600">@rahim.store.bd</div><div style="font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Instagram business · 18.2K followers</div></div><span class="chip dot">Active</span></div>
+<div class="t-body">
+<div class="row"><span class="k">Last post</span><span class="v">2 hr ago</span></div>
+<div class="row"><span class="k">Posts this month</span><span class="v">4 / 20</span></div>
+<div class="row"><span class="k">Avg first-hour</span><span class="v">82% velocity</span></div>
+<div class="row"><span class="k">Priority tag</span><span class="chip" style="font-size:.7rem">Standard</span></div>
+</div>
+<div class="t-foot"><span class="mono" style="font-size:.72rem;color:var(--muted)">Connected Apr 1 · OAuth</span><div style="display:flex;gap:.4rem"><button class="btn sm ghost">Pause</button><button class="btn sm">Manage</button></div></div>
+</div>
+
+<div class="t-card">
+<div class="t-head"><div class="plat x">𝕏</div><div style="flex:1"><div style="font-weight:600">@rahim_live</div><div style="font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace">X handle · 8.1K followers</div></div><span class="chip dot warn">Needs attention</span></div>
+<div class="t-body">
+<div class="row"><span class="k">Last post</span><span class="v">1 hr ago</span></div>
+<div class="row"><span class="k">Posts this month</span><span class="v">3 / 20</span></div>
+<div class="row"><span class="k">Avg first-hour</span><span class="v">55% velocity</span></div>
+<div class="row"><span class="k">Priority tag</span><span class="chip" style="font-size:.7rem">Secondary</span></div>
+</div>
+<div class="t-foot"><span class="mono" style="font-size:.72rem;color:var(--muted)">Connected Apr 12 · OAuth</span><div style="display:flex;gap:.4rem"><button class="btn sm ghost">Pause</button><button class="btn sm">Manage</button></div></div>
+</div>
+
+<div class="t-card">
+<div class="t-head"><div class="plat ig">◉</div><div style="flex:1"><div style="font-weight:600">@rahim.chittagong</div><div style="font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Instagram business · 4.4K followers</div></div><span class="chip dot idle">Paused</span></div>
+<div class="t-body">
+<div class="row"><span class="k">Last post</span><span class="v">3 days ago</span></div>
+<div class="row"><span class="k">Posts this month</span><span class="v">0 / 20</span></div>
+<div class="row"><span class="k">Avg first-hour</span><span class="v">—</span></div>
+<div class="row"><span class="k">Priority tag</span><span class="chip" style="font-size:.7rem">Low</span></div>
+</div>
+<div class="t-foot"><span class="mono" style="font-size:.72rem;color:var(--muted)">Paused Apr 18</span><div style="display:flex;gap:.4rem"><button class="btn sm">Resume</button><button class="btn sm ghost">Archive</button></div></div>
+</div>
+
+<div class="add-card">+ Connect new account</div>
+
+</div>
+
+<div class="note info" style="margin-top:1.5rem"><div class="ico">i</div>Your Standard plan covers up to 3 active targets. Ultra raises this to 5, Agency unlimited. <a href="app-billing.html" style="color:var(--accent);font-weight:600">Upgrade →</a></div>
+
+</div></div></div></body></html>

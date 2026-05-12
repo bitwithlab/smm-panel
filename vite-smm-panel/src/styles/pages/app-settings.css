@@ -1,0 +1,102 @@
+.p-settings .set-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.25rem;
+}
+@media (max-width: 900px) {
+  .p-settings .set-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.p-settings .set-nav {
+  background: var(--cream);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  padding: 0.5rem;
+  height: max-content;
+}
+.p-settings .set-nav a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: 7px;
+  font-size: 0.88rem;
+  color: inherit;
+  text-decoration: none;
+}
+.p-settings .set-nav a:hover {
+  background: var(--paper-2);
+}
+.p-settings .set-nav a.on {
+  background: var(--ink);
+  color: var(--cream);
+}
+.p-settings .sect {
+  background: var(--cream);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.p-settings .sect h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.p-settings .sect p.s {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+.p-settings .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .p-settings .row {
+    grid-template-columns: 1fr;
+  }
+}
+.p-settings .toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed var(--line-2);
+}
+.p-settings .toggle-row:last-child {
+  border-bottom: none;
+}
+.p-settings .toggle-row .tl {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.p-settings .toggle-row .sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+.p-settings .team-row {
+  display: grid;
+  grid-template-columns: 36px 1fr 140px 100px 40px;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.7rem 0;
+  border-bottom: 1px dashed var(--line-2);
+  font-size: 0.88rem;
+}
+.p-settings .team-row:last-child {
+  border-bottom: none;
+}
+.p-settings .avatar-sm {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  border: 1.5px solid var(--ink);
+  font-size: 0.8rem;
+}

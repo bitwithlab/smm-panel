@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — Comment Library</title><link rel="stylesheet" href="shared.css">
+<style>
+.lib-grid{display:grid;grid-template-columns:220px 1fr;gap:1.25rem}
+@media(max-width:900px){.lib-grid{grid-template-columns:1fr}}
+.cats{background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;padding:.6rem;height:max-content}
+.cat{padding:.55rem .7rem;border-radius:8px;font-size:.88rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.cat:hover{background:var(--paper-2)}
+.cat.on{background:var(--ink);color:var(--cream)}
+.cat .n{font-family:'JetBrains Mono',monospace;font-size:.7rem;opacity:.6}
+.cards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.85rem}
+@media(max-width:700px){.cards-grid{grid-template-columns:1fr}}
+.rep{background:var(--cream);border:1.5px solid var(--ink);border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.5rem}
+.rep .body{font-size:.92rem;line-height:1.45;min-height:62px}
+.rep .foot{display:flex;justify-content:space-between;align-items:center;padding-top:.6rem;border-top:1px dashed var(--line-2);font-size:.74rem;color:var(--muted)}
+.rep .tags{display:flex;gap:.3rem;flex-wrap:wrap}
+.new-rep{border:2px dashed var(--ink);background:transparent;color:var(--muted);display:grid;place-items:center;font-family:'Fraunces',serif;font-weight:600;min-height:130px;cursor:pointer;border-radius:10px}
+.new-rep:hover{background:var(--lime);color:var(--ink)}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow</a>
+<div class="sb-group">Workspace</div>
+<a href="app-overview.html" class="sb-item"><span class="sb-ico">◆</span>Overview</a>
+<a href="app-targets.html" class="sb-item"><span class="sb-ico">◎</span>Targets</a>
+<a href="app-queue.html" class="sb-item"><span class="sb-ico">⎘</span>Response queue<span class="chip accent" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">7</span></a>
+<a href="app-comments.html" class="sb-item active"><span class="sb-ico">✎</span>Comment library</a>
+<div class="sb-group">Insights</div>
+<a href="app-analytics.html" class="sb-item"><span class="sb-ico">◫</span>Analytics</a>
+<a href="app-activity.html" class="sb-item"><span class="sb-ico">☰</span>Activity log</a>
+<div class="sb-group">Account</div>
+<a href="app-billing.html" class="sb-item"><span class="sb-ico">৳</span>Billing</a>
+<a href="app-settings.html" class="sb-item"><span class="sb-ico">⚙</span>Settings</a>
+<div class="sb-foot"><div class="sb-avatar">N</div><div><div style="font-weight:600">Nusrat J.</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Standard plan</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Workspace</span><span class="sep">/</span><b>Comment library</b></div>
+<div class="app-search">🔍<input placeholder="Search replies…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><button class="btn sm primary">+ New reply</button></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>Comment library</h1><p>Brand-voice replies reusable across posts · 14 of 20 on Standard plan.</p></div>
+<div class="page-head-actions"><button class="btn ghost sm">Import</button><button class="btn sm">Bulk edit</button><button class="btn sm primary">+ New reply</button></div></div>
+
+<div class="lib-grid">
+<div class="cats">
+<div class="cat on"><span>All</span><span class="n">14</span></div>
+<div class="cat"><span>Warm · friendly</span><span class="n">5</span></div>
+<div class="cat"><span>Informational</span><span class="n">4</span></div>
+<div class="cat"><span>Playful</span><span class="n">3</span></div>
+<div class="cat"><span>Support</span><span class="n">2</span></div>
+<div style="margin:.7rem 0;border-top:1px dashed var(--line-2)"></div>
+<div class="cat"><span>Bangla</span><span class="n">9</span></div>
+<div class="cat"><span>English</span><span class="n">5</span></div>
+<div style="margin:.7rem 0;border-top:1px dashed var(--line-2)"></div>
+<div class="cat"><span>+ New category</span><span class="n">·</span></div>
+</div>
+
+<div class="cards-grid">
+
+<div class="rep"><div class="body">"Loving the color story on this drop — which one's the best-seller so far?"</div><div class="tags"><span class="chip">Warm</span><span class="chip">English</span></div><div class="foot"><span>Used 34×</span><span class="mono">↗ 68% reply rate</span></div></div>
+
+<div class="rep"><div class="body">"দারুণ কালেকশন! সাইজ কি সব available? 🔥"</div><div class="tags"><span class="chip">Warm</span><span class="chip">Bangla</span></div><div class="foot"><span>Used 28×</span><span class="mono">↗ 72% reply rate</span></div></div>
+
+<div class="rep"><div class="body">"In stock, all three sizes. DM us for the price list today."</div><div class="tags"><span class="chip">Info</span><span class="chip">English</span></div><div class="foot"><span>Used 41×</span><span class="mono">↗ 58% reply rate</span></div></div>
+
+<div class="rep"><div class="body">"ভাইরাল হওয়ার মতো কালেকশন! 👏"</div><div class="tags"><span class="chip">Playful</span><span class="chip">Bangla</span></div><div class="foot"><span>Used 19×</span><span class="mono">↗ 64% reply rate</span></div></div>
+
+<div class="rep"><div class="body">"Price inbox please — within Dhaka free delivery today."</div><div class="tags"><span class="chip">Info</span><span class="chip">Mixed</span></div><div class="foot"><span>Used 52×</span><span class="mono">↗ 81% reply rate</span></div></div>
+
+<div class="rep"><div class="body">"আমার জন্য একটা রাখুন, কাল morning তে collection point থেকে নেবো।"</div><div class="tags"><span class="chip">Warm</span><span class="chip">Bangla</span></div><div class="foot"><span>Used 17×</span><span class="mono">↗ 59% reply rate</span></div></div>
+
+<div class="rep"><div class="body">"Amazing quality! Ordered last month and the stitching is top-tier 💯"</div><div class="tags"><span class="chip">Warm</span><span class="chip">English</span></div><div class="foot"><span>Used 23×</span><span class="mono">↗ 66% reply rate</span></div></div>
+
+<div class="rep"><div class="body">"Delivery Dhaka? Outside Dhaka কত দিন লাগে সাধারণত?"</div><div class="tags"><span class="chip">Support</span><span class="chip">Bangla</span></div><div class="foot"><span>Used 12×</span><span class="mono">↗ 45% reply rate</span></div></div>
+
+<div class="new-rep">+ Add reply template</div>
+
+</div>
+</div>
+
+</div></div></div></body></html>

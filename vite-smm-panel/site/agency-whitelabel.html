@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — White-label</title><link rel="stylesheet" href="shared.css">
+<style>
+.wl-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+@media(max-width:900px){.wl-grid{grid-template-columns:1fr}}
+.preview-card{background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;overflow:hidden;position:sticky;top:1rem}
+.preview-head{background:var(--paper-2);padding:.6rem 1rem;border-bottom:1.5px solid var(--ink);font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);display:flex;align-items:center;gap:.5rem}
+.preview-head::before{content:"";display:flex;gap:4px}
+.pw-dots{display:flex;gap:5px}
+.pw-dots span{width:9px;height:9px;border-radius:50%;background:var(--line-2)}
+.wl-app{padding:1rem;min-height:440px;background:var(--brand-bg,#f5f1ea);color:var(--brand-ink,#0a0a0a);border-radius:8px}
+.wl-topbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:.8rem;border-bottom:1.5px solid currentColor;margin-bottom:1rem}
+.wl-logo{display:flex;align-items:center;gap:.5rem;font-family:'Fraunces',serif;font-weight:700}
+.wl-mark{width:22px;height:22px;border-radius:50%;background:var(--brand-accent,#ff4d1f)}
+.wl-card-mini{border:1.5px solid currentColor;border-radius:8px;padding:.8rem;margin-bottom:.6rem;background:rgba(255,255,255,.3)}
+.wl-btn{background:var(--brand-accent,#ff4d1f);color:var(--brand-ink,#0a0a0a);border:1.5px solid currentColor;padding:.4rem .9rem;font-size:.75rem;font-weight:600;border-radius:2px}
+.swatches{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.4rem}
+.sw{width:34px;height:34px;border-radius:6px;border:1.5px solid var(--ink);cursor:pointer}
+.sw.on{outline:3px solid var(--ink);outline-offset:2px}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow <span class="chip accent" style="font-size:.6rem;margin-left:.3rem">Agency</span></a>
+<div class="sb-group">Agency</div>
+<a href="agency-clients.html" class="sb-item"><span class="sb-ico">◈</span>Clients<span class="chip" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">12</span></a>
+<a href="agency-whitelabel.html" class="sb-item active"><span class="sb-ico">◇</span>White-label</a>
+<a href="agency-reports.html" class="sb-item"><span class="sb-ico">◫</span>Reports</a>
+<div class="sb-group">Workspace</div>
+<a href="app-overview.html" class="sb-item"><span class="sb-ico">◆</span>Overview</a>
+<a href="app-queue.html" class="sb-item"><span class="sb-ico">⎘</span>Queue</a>
+<a href="app-analytics.html" class="sb-item"><span class="sb-ico">◫</span>Analytics</a>
+<div class="sb-group">Account</div>
+<a href="app-billing.html" class="sb-item"><span class="sb-ico">৳</span>Billing</a>
+<a href="app-settings.html" class="sb-item"><span class="sb-ico">⚙</span>Settings</a>
+<div class="sb-foot"><div class="sb-avatar" style="background:var(--forest);color:var(--cream)">M</div><div><div style="font-weight:600">Mehedi · Orbit Agency</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Agency plan · 12 seats</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Agency</span><span class="sep">/</span><b>White-label</b></div>
+<div class="app-search">🔍<input placeholder="Search settings…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><button class="btn sm">Preview live</button><button class="btn sm primary">Save & publish</button></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>White-label</h1><p>Your clients will see your brand — not ours.</p></div></div>
+
+<div class="wl-grid">
+<div>
+
+<div class="card" style="margin-bottom:1rem">
+<div class="card-title">Identity</div>
+<div class="card-sub">Brand name + logo shown in app header, emails, PDF reports.</div>
+<div class="divider"></div>
+<div class="field"><label>Brand name</label><input class="input" value="Orbit Growth"></div>
+<div class="field"><label>Tagline</label><input class="input" value="Social momentum, managed."></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+<div class="field"><label>Logo mark (SVG)</label><button class="btn sm full">↑ Upload SVG</button></div>
+<div class="field"><label>Favicon</label><button class="btn sm full">↑ Upload 32×32</button></div>
+</div>
+</div>
+
+<div class="card" style="margin-bottom:1rem">
+<div class="card-title">Colors</div>
+<div class="card-sub">Applied across login, dashboard, emails, PDF.</div>
+<div class="divider"></div>
+<div class="field"><label>Accent</label><div class="swatches"><span class="sw on" style="background:#ff4d1f" onclick="setColor(this,'#ff4d1f')"></span><span class="sw" style="background:#d4ff3a" onclick="setColor(this,'#d4ff3a')"></span><span class="sw" style="background:#1a3a2a" onclick="setColor(this,'#1a3a2a')"></span><span class="sw" style="background:#2563eb" onclick="setColor(this,'#2563eb')"></span><span class="sw" style="background:#e11d48" onclick="setColor(this,'#e11d48')"></span><span class="sw" style="background:#7c3aed" onclick="setColor(this,'#7c3aed')"></span><span class="sw" style="background:#f59e0b" onclick="setColor(this,'#f59e0b')"></span></div></div>
+<div class="field"><label>Theme</label>
+<div style="display:flex;gap:.5rem"><button class="btn sm" style="background:var(--paper);flex:1">☀ Light</button><button class="btn sm" style="background:var(--ink);color:var(--cream);flex:1">● Dark</button><button class="btn sm ghost" style="flex:1">Auto</button></div>
+</div>
+</div>
+
+<div class="card" style="margin-bottom:1rem">
+<div class="card-title">Domain</div>
+<div class="card-sub">Where clients log in.</div>
+<div class="divider"></div>
+<div class="field"><label>Subdomain</label><div style="display:flex;gap:.4rem;align-items:center"><input class="input" value="orbit" style="flex:1"><span class="mono" style="color:var(--muted)">.engageflow.app</span></div></div>
+<div class="field"><label>Custom domain (optional)</label><input class="input" placeholder="dashboard.orbitagency.bd"><div style="font-size:.75rem;color:var(--muted);margin-top:.3rem;font-family:'JetBrains Mono',monospace">CNAME → whitelabel.engageflow.app · SSL auto-provisioned</div></div>
+</div>
+
+<div class="card">
+<div class="card-title">Emails & reports</div>
+<div class="card-sub">Your from-name on every outgoing email.</div>
+<div class="divider"></div>
+<div class="field"><label>From name</label><input class="input" value="Orbit Growth"></div>
+<div class="field"><label>From email</label><input class="input" value="hello@orbitagency.bd"></div>
+<div class="field"><label>Footer line on PDFs</label><input class="input" value="Prepared by Orbit Growth · orbitagency.bd"></div>
+</div>
+
+</div>
+
+<div>
+<div class="preview-card">
+<div class="preview-head"><div class="pw-dots"><span></span><span></span><span></span></div><span>orbit.engageflow.app</span></div>
+<div class="wl-app" style="--brand-bg:#f5f1ea;--brand-ink:#0a0a0a;--brand-accent:#ff4d1f">
+<div class="wl-topbar">
+<div class="wl-logo"><span class="wl-mark"></span>Orbit Growth</div>
+<span style="font-family:'JetBrains Mono',monospace;font-size:.7rem;opacity:.6">Client portal</span>
+</div>
+<div style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;margin-bottom:.6rem">Good morning, Rahim 👋</div>
+<div style="color:rgba(0,0,0,.55);font-size:.82rem;margin-bottom:1rem">3 new posts detected · next scan in 04:12</div>
+
+<div class="wl-card-mini"><div style="display:flex;justify-content:space-between;font-size:.82rem;font-weight:600">@rahimfashionhouse<span style="opacity:.5;font-family:'JetBrains Mono',monospace;font-size:.7rem">42m</span></div><div style="margin-top:.3rem;font-size:.72rem;opacity:.65">184 reactions · 34 comments</div><div style="height:5px;background:rgba(0,0,0,.08);border-radius:3px;margin-top:.5rem;overflow:hidden"><div style="height:100%;width:68%;background:var(--brand-accent)"></div></div></div>
+
+<div class="wl-card-mini"><div style="display:flex;justify-content:space-between;font-size:.82rem;font-weight:600">@rahim.store.bd<span style="opacity:.5;font-family:'JetBrains Mono',monospace;font-size:.7rem">2h</span></div><div style="margin-top:.3rem;font-size:.72rem;opacity:.65">312 likes · 47 comments</div><div style="height:5px;background:rgba(0,0,0,.08);border-radius:3px;margin-top:.5rem;overflow:hidden"><div style="height:100%;width:82%;background:var(--brand-accent)"></div></div></div>
+
+<div style="display:flex;gap:.4rem;margin-top:1rem"><button class="wl-btn">Open queue →</button><button class="wl-btn" style="background:transparent">View reports</button></div>
+<div style="margin-top:1.5rem;padding-top:.8rem;border-top:1px dashed rgba(0,0,0,.15);font-family:'JetBrains Mono',monospace;font-size:.65rem;opacity:.45;text-align:center">Prepared by Orbit Growth · orbitagency.bd</div>
+</div>
+</div>
+</div>
+</div>
+
+</div></div></div>
+<script>
+function setColor(el,c){document.querySelectorAll('.sw').forEach(s=>s.classList.remove('on'));el.classList.add('on');document.querySelector('.wl-app').style.setProperty('--brand-accent',c)}
+</script>
+</body></html>

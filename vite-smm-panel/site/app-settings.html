@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — Settings</title><link rel="stylesheet" href="shared.css">
+<style>
+.set-grid{display:grid;grid-template-columns:220px 1fr;gap:1.25rem}
+@media(max-width:900px){.set-grid{grid-template-columns:1fr}}
+.set-nav{background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;padding:.5rem;height:max-content}
+.set-nav a{display:block;padding:.55rem .75rem;border-radius:7px;font-size:.88rem;color:inherit;text-decoration:none}
+.set-nav a:hover{background:var(--paper-2)}
+.set-nav a.on{background:var(--ink);color:var(--cream)}
+.sect{background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;padding:1.5rem;margin-bottom:1rem}
+.sect h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin-bottom:.3rem}
+.sect p.s{color:var(--muted);font-size:.85rem;margin-bottom:1.25rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:600px){.row{grid-template-columns:1fr}}
+.toggle-row{display:flex;justify-content:space-between;align-items:center;padding:.85rem 0;border-bottom:1px dashed var(--line-2)}
+.toggle-row:last-child{border-bottom:none}
+.toggle-row .tl{font-weight:600;font-size:.9rem}
+.toggle-row .sub{font-size:.8rem;color:var(--muted);margin-top:.15rem}
+.team-row{display:grid;grid-template-columns:36px 1fr 140px 100px 40px;gap:.8rem;align-items:center;padding:.7rem 0;border-bottom:1px dashed var(--line-2);font-size:.88rem}
+.team-row:last-child{border-bottom:none}
+.avatar-sm{width:32px;height:32px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-weight:700;border:1.5px solid var(--ink);font-size:.8rem}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow</a>
+<div class="sb-group">Workspace</div>
+<a href="app-overview.html" class="sb-item"><span class="sb-ico">◆</span>Overview</a>
+<a href="app-targets.html" class="sb-item"><span class="sb-ico">◎</span>Targets</a>
+<a href="app-queue.html" class="sb-item"><span class="sb-ico">⎘</span>Response queue<span class="chip accent" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">7</span></a>
+<a href="app-comments.html" class="sb-item"><span class="sb-ico">✎</span>Comment library</a>
+<div class="sb-group">Insights</div>
+<a href="app-analytics.html" class="sb-item"><span class="sb-ico">◫</span>Analytics</a>
+<a href="app-activity.html" class="sb-item"><span class="sb-ico">☰</span>Activity log</a>
+<div class="sb-group">Account</div>
+<a href="app-billing.html" class="sb-item"><span class="sb-ico">৳</span>Billing</a>
+<a href="app-settings.html" class="sb-item active"><span class="sb-ico">⚙</span>Settings</a>
+<div class="sb-foot"><div class="sb-avatar">N</div><div><div style="font-weight:600">Nusrat J.</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Standard plan</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Account</span><span class="sep">/</span><b>Settings</b></div>
+<div class="app-search">🔍<input placeholder="Search settings…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><button class="btn sm primary">Save changes</button></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>Settings</h1><p>Profile, team, notifications, and API access.</p></div></div>
+
+<div class="set-grid">
+<div class="set-nav">
+<a href="#" class="on">Profile</a>
+<a href="#">Workspace</a>
+<a href="#">Team & roles</a>
+<a href="#">Notifications</a>
+<a href="#">Connections</a>
+<a href="#">API & webhooks</a>
+<a href="#">Language · বাংলা/EN</a>
+<a href="#">Security · 2FA</a>
+<a href="#" style="color:var(--bad)">Delete workspace</a>
+</div>
+
+<div>
+
+<div class="sect">
+<h3>Profile</h3><p class="s">This is how teammates and exported reports see you.</p>
+<div class="row">
+<div class="field"><label>Full name</label><input class="input" value="Nusrat Jahan"></div>
+<div class="field"><label>Email</label><input class="input" value="nusrat@fashionhouse.bd"></div>
+<div class="field"><label>Phone</label><input class="input" value="+880 1700 000 000"></div>
+<div class="field"><label>Timezone</label><select class="input"><option selected>Asia/Dhaka (BST)</option><option>Asia/Kolkata (IST)</option></select></div>
+</div>
+</div>
+
+<div class="sect">
+<h3>Team members</h3><p class="s">Standard plan includes 3 seats · 2 remaining.</p>
+<div class="team-row"><div class="avatar-sm" style="background:var(--accent)">N</div><div><b>Nusrat Jahan</b><div style="font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace">nusrat@fashionhouse.bd</div></div><select class="input" style="padding:.35rem .5rem;font-size:.8rem"><option selected>Owner</option></select><span class="chip dot">Active</span><button class="iconbtn" style="font-size:.9rem">⋯</button></div>
+<div class="team-row"><div class="avatar-sm" style="background:var(--lime)">A</div><div><b>Ayesha Rahman</b><div style="font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace">ayesha@fashionhouse.bd</div></div><select class="input" style="padding:.35rem .5rem;font-size:.8rem"><option selected>Editor</option><option>Reviewer</option><option>Read-only</option></select><span class="chip dot">Active</span><button class="iconbtn" style="font-size:.9rem">⋯</button></div>
+<div class="team-row"><div class="avatar-sm" style="background:var(--forest);color:var(--cream)">K</div><div><b>Karim Ali</b><div style="font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace">karim@fashionhouse.bd</div></div><select class="input" style="padding:.35rem .5rem;font-size:.8rem"><option>Editor</option><option selected>Reviewer</option></select><span class="chip dot idle">Invited</span><button class="iconbtn" style="font-size:.9rem">⋯</button></div>
+<button class="btn sm" style="margin-top:.8rem">+ Invite teammate</button>
+</div>
+
+<div class="sect">
+<h3>Notifications</h3><p class="s">Choose when we ping you.</p>
+<div class="toggle-row"><div><div class="tl">New post detected</div><div class="sub">Email · within 5 minutes of detection</div></div><div class="switch on"></div></div>
+<div class="toggle-row"><div><div class="tl">Reply needs approval</div><div class="sub">Email + in-app · sent to reviewers</div></div><div class="switch on"></div></div>
+<div class="toggle-row"><div><div class="tl">Daily digest</div><div class="sub">One email at 8am BST with yesterday's numbers</div></div><div class="switch on"></div></div>
+<div class="toggle-row"><div><div class="tl">Weekly PDF report</div><div class="sub">Monday 9am BST · to all team members</div></div><div class="switch on"></div></div>
+<div class="toggle-row"><div><div class="tl">Quota warning</div><div class="sub">Ping when 80% of monthly posts used</div></div><div class="switch"></div></div>
+<div class="toggle-row"><div><div class="tl">Product announcements</div><div class="sub">One email per month about new features</div></div><div class="switch on"></div></div>
+</div>
+
+<div class="sect">
+<h3>API & webhooks <span class="badge" style="background:var(--accent);margin-left:.4rem">Ultra</span></h3><p class="s">Integrate EngageFlow with Zapier, Pabbly, or your own stack.</p>
+<div class="field"><label>API key</label><input class="input mono" value="sk_live_7f2c8••••••••••••••••••" readonly></div>
+<div class="field"><label>Webhook URL</label><input class="input" placeholder="https://your-domain.app/engageflow/webhook"></div>
+<div style="display:flex;gap:.5rem"><button class="btn sm ghost">Regenerate key</button><button class="btn sm">Test webhook</button></div>
+</div>
+
+</div>
+</div>
+
+</div></div></div></body></html>

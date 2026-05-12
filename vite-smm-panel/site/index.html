@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EngageFlow — Full Website Design</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+body.grain{background:var(--paper)}
+.sitemap{max-width:1320px;margin:0 auto;padding:3rem 2rem 5rem}
+.hero-index{padding:3rem 0 2rem;border-bottom:2px solid var(--ink);margin-bottom:3rem}
+.hero-index h1{font-family:'Fraunces',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:500;letter-spacing:-.02em;line-height:.95;max-width:900px}
+.hero-index h1 em{color:var(--accent);font-style:italic}
+.hero-index p{color:var(--muted);font-size:1.05rem;margin-top:1rem;max-width:620px}
+.hero-meta{display:flex;gap:2rem;margin-top:1.5rem;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted)}
+.hero-meta b{color:var(--ink);font-weight:600}
+.group{margin-bottom:3rem}
+.group-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.2rem}
+.group-head h2{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:600}
+.group-head .count{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--muted)}
+.group-head .role{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:.7rem;padding:.25rem .7rem;border:1.5px solid var(--ink);border-radius:100px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.group.public .role{background:var(--lime)}
+.group.customer .role{background:var(--accent);color:var(--ink)}
+.group.agency .role{background:var(--forest);color:var(--cream)}
+.group.admin .role{background:var(--ink);color:var(--cream)}
+.pages{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:1000px){.pages{grid-template-columns:repeat(2,1fr)}}
+.page-card{
+  background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;
+  text-decoration:none;color:inherit;overflow:hidden;display:flex;flex-direction:column;
+  transition:all .15s;
+}
+.page-card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
+.page-thumb{aspect-ratio:16/10;background:var(--paper-2);border-bottom:1.5px solid var(--ink);display:grid;place-items:center;position:relative;overflow:hidden}
+.page-card.featured .page-thumb{background:linear-gradient(135deg,var(--accent),#ff7a52)}
+.page-card.dark .page-thumb{background:var(--ink);color:var(--cream)}
+.page-card.forest .page-thumb{background:var(--forest);color:var(--cream)}
+.page-card.lime .page-thumb{background:var(--lime)}
+.thumb-icon{font-family:'Fraunces',serif;font-size:2.5rem;font-weight:700;font-style:italic;opacity:.85}
+.thumb-num{position:absolute;top:.6rem;left:.8rem;font-family:'JetBrains Mono',monospace;font-size:.7rem;opacity:.55;font-weight:600}
+.thumb-tag{position:absolute;bottom:.6rem;right:.6rem;font-family:'JetBrains Mono',monospace;font-size:.65rem;padding:.2rem .5rem;background:rgba(0,0,0,.1);border-radius:4px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.page-card.dark .thumb-tag,.page-card.forest .thumb-tag{background:rgba(255,255,255,.15)}
+.page-meta{padding:.9rem 1rem}
+.page-meta h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin-bottom:.15rem}
+.page-meta p{font-size:.78rem;color:var(--muted);line-height:1.4}
+</style>
+</head>
+<body class="grain">
+<nav class="m-nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow</a>
+  <div class="m-nav-links">
+    <a href="home.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="m-nav-right">
+    <a href="login.html" class="btn sm ghost">Sign in</a>
+    <a href="signup.html" class="btn sm primary">Start trial</a>
+  </div>
+</nav>
+
+<div class="sitemap">
+  <div class="hero-index">
+    <div class="eyebrow dot" style="margin-bottom:1.25rem">Full website design · v1.0 · April 2026</div>
+    <h1 class="display">Complete UI for <em>every page, every user.</em></h1>
+    <p>All pages that make up the EngageFlow product — public marketing site, customer dashboard for SMBs &amp; creators, agency workspace for white-label resellers, and internal platform admin. English language, built on the existing brand system (Fraunces + Hind Siliguri, paper/ink, electric orange accent, lime highlights, forest dark).</p>
+    <div class="hero-meta">
+      <div><b>22 pages</b> · across 4 roles</div>
+      <div><b>Visitor · Customer · Agency · Admin</b></div>
+      <div>Click any card to open →</div>
+    </div>
+  </div>
+
+  <div class="group public">
+    <div class="group-head">
+      <h2>Public marketing site</h2>
+      <span class="count">07 pages</span>
+      <span class="role">Visitor</span>
+    </div>
+    <div class="pages">
+      <a class="page-card featured" href="home.html">
+        <div class="page-thumb"><span class="thumb-num">01 / HOME</span><span class="thumb-icon">Home</span><span class="thumb-tag">Landing</span></div>
+        <div class="page-meta"><h3>Home</h3><p>Hero, value props, social proof, primary CTA</p></div>
+      </a>
+      <a class="page-card" href="features.html">
+        <div class="page-thumb"><span class="thumb-num">02 / FEATURES</span><span class="thumb-icon">Features</span><span class="thumb-tag">Product</span></div>
+        <div class="page-meta"><h3>Features</h3><p>13 capabilities across FB, IG, X/Twitter</p></div>
+      </a>
+      <a class="page-card dark" href="pricing.html">
+        <div class="page-thumb"><span class="thumb-num">03 / PRICING</span><span class="thumb-icon">৳</span><span class="thumb-tag">Plans</span></div>
+        <div class="page-meta"><h3>Pricing</h3><p>Basic / Standard / Ultra / Agency tiers</p></div>
+      </a>
+      <a class="page-card lime" href="about.html">
+        <div class="page-thumb"><span class="thumb-num">04 / ABOUT</span><span class="thumb-icon">About</span><span class="thumb-tag">Story</span></div>
+        <div class="page-meta"><h3>About</h3><p>Team, mission, compliance posture</p></div>
+      </a>
+      <a class="page-card forest" href="contact.html">
+        <div class="page-thumb"><span class="thumb-num">05 / CONTACT</span><span class="thumb-icon">Contact</span><span class="thumb-tag">Support</span></div>
+        <div class="page-meta"><h3>Contact</h3><p>Sales, support, partner inquiries</p></div>
+      </a>
+      <a class="page-card" href="login.html">
+        <div class="page-thumb"><span class="thumb-num">06 / LOGIN</span><span class="thumb-icon">Sign in</span><span class="thumb-tag">Auth</span></div>
+        <div class="page-meta"><h3>Login</h3><p>Email + social sign-in, 2FA ready</p></div>
+      </a>
+      <a class="page-card" href="signup.html">
+        <div class="page-thumb"><span class="thumb-num">07 / SIGNUP</span><span class="thumb-icon">Join</span><span class="thumb-tag">Auth</span></div>
+        <div class="page-meta"><h3>Sign up</h3><p>7-day trial, no card required</p></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="group customer">
+    <div class="group-head">
+      <h2>Customer dashboard</h2>
+      <span class="count">08 pages</span>
+      <span class="role">SMB / Creator</span>
+    </div>
+    <div class="pages">
+      <a class="page-card featured" href="app-overview.html">
+        <div class="page-thumb"><span class="thumb-num">08 / OVERVIEW</span><span class="thumb-icon">Home</span><span class="thumb-tag">Dashboard</span></div>
+        <div class="page-meta"><h3>Overview</h3><p>Daily briefing, live feed, quota</p></div>
+      </a>
+      <a class="page-card" href="app-targets.html">
+        <div class="page-thumb"><span class="thumb-num">09 / TARGETS</span><span class="thumb-icon">Targets</span><span class="thumb-tag">Accounts</span></div>
+        <div class="page-meta"><h3>Target profiles</h3><p>Connected FB / IG / X accounts</p></div>
+      </a>
+      <a class="page-card lime" href="app-queue.html">
+        <div class="page-thumb"><span class="thumb-num">10 / QUEUE</span><span class="thumb-icon">Queue</span><span class="thumb-tag">Workflow</span></div>
+        <div class="page-meta"><h3>Response queue</h3><p>Posts awaiting review & scheduled replies</p></div>
+      </a>
+      <a class="page-card" href="app-comments.html">
+        <div class="page-thumb"><span class="thumb-num">11 / COMMENTS</span><span class="thumb-icon">Library</span><span class="thumb-tag">Content</span></div>
+        <div class="page-meta"><h3>Comment library</h3><p>Reusable replies, AI-assisted drafting</p></div>
+      </a>
+      <a class="page-card dark" href="app-analytics.html">
+        <div class="page-thumb"><span class="thumb-num">12 / ANALYTICS</span><span class="thumb-icon">Analytics</span><span class="thumb-tag">Insights</span></div>
+        <div class="page-meta"><h3>Analytics</h3><p>Reach, engagement velocity, per-platform</p></div>
+      </a>
+      <a class="page-card" href="app-activity.html">
+        <div class="page-thumb"><span class="thumb-num">13 / ACTIVITY</span><span class="thumb-icon">Log</span><span class="thumb-tag">History</span></div>
+        <div class="page-meta"><h3>Activity log</h3><p>Timestamped actions & audit trail</p></div>
+      </a>
+      <a class="page-card" href="app-billing.html">
+        <div class="page-thumb"><span class="thumb-num">14 / BILLING</span><span class="thumb-icon">Billing</span><span class="thumb-tag">Account</span></div>
+        <div class="page-meta"><h3>Billing</h3><p>Plan, invoices, bKash / Nagad / card</p></div>
+      </a>
+      <a class="page-card" href="app-settings.html">
+        <div class="page-thumb"><span class="thumb-num">15 / SETTINGS</span><span class="thumb-icon">Settings</span><span class="thumb-tag">Config</span></div>
+        <div class="page-meta"><h3>Settings</h3><p>Profile, team, notifications, API</p></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="group agency">
+    <div class="group-head">
+      <h2>Agency workspace</h2>
+      <span class="count">03 pages</span>
+      <span class="role">Agency Admin</span>
+    </div>
+    <div class="pages">
+      <a class="page-card forest" href="agency-clients.html">
+        <div class="page-thumb"><span class="thumb-num">16 / CLIENTS</span><span class="thumb-icon">Clients</span><span class="thumb-tag">Portfolio</span></div>
+        <div class="page-meta"><h3>Clients</h3><p>Sub-accounts roster, seat usage</p></div>
+      </a>
+      <a class="page-card" href="agency-whitelabel.html">
+        <div class="page-thumb"><span class="thumb-num">17 / WHITELABEL</span><span class="thumb-icon">Brand</span><span class="thumb-tag">Reseller</span></div>
+        <div class="page-meta"><h3>White-label</h3><p>Custom domain, logo, reseller pricing</p></div>
+      </a>
+      <a class="page-card" href="agency-reports.html">
+        <div class="page-thumb"><span class="thumb-num">18 / REPORTS</span><span class="thumb-icon">Reports</span><span class="thumb-tag">PDF</span></div>
+        <div class="page-meta"><h3>Client reports</h3><p>Branded PDF exports, schedules</p></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="group admin">
+    <div class="group-head">
+      <h2>Platform admin</h2>
+      <span class="count">04 pages</span>
+      <span class="role">Internal</span>
+    </div>
+    <div class="pages">
+      <a class="page-card dark" href="admin-ops.html">
+        <div class="page-thumb"><span class="thumb-num">19 / OPS</span><span class="thumb-icon">Ops</span><span class="thumb-tag">Staff</span></div>
+        <div class="page-meta"><h3>Ops dashboard</h3><p>MRR, churn, live system health</p></div>
+      </a>
+      <a class="page-card" href="admin-users.html">
+        <div class="page-thumb"><span class="thumb-num">20 / USERS</span><span class="thumb-icon">Users</span><span class="thumb-tag">CRM</span></div>
+        <div class="page-meta"><h3>Users</h3><p>Search, impersonate, plan edits</p></div>
+      </a>
+      <a class="page-card" href="admin-compliance.html">
+        <div class="page-thumb"><span class="thumb-num">21 / COMPLIANCE</span><span class="thumb-icon">Compliance</span><span class="thumb-tag">Policy</span></div>
+        <div class="page-meta"><h3>Compliance</h3><p>Rate limits, ToS flags, review queue</p></div>
+      </a>
+      <a class="page-card" href="admin-system.html">
+        <div class="page-thumb"><span class="thumb-num">22 / SYSTEM</span><span class="thumb-icon">System</span><span class="thumb-tag">Infra</span></div>
+        <div class="page-meta"><h3>System health</h3><p>Proxies, API quotas, job workers</p></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

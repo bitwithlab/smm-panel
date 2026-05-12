@@ -1,0 +1,116 @@
+.p-analytics .grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.p-analytics .grid-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 900px) {
+  .p-analytics .grid-4,
+  .p-analytics .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+.p-analytics .date-picker {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.p-analytics .chart {
+  height: 220px;
+  background: var(--paper);
+  border: 1.5px dashed var(--line-2);
+  border-radius: 8px;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+.p-analytics .chart .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: flex-end;
+}
+.p-analytics .chart .col .seg {
+  border-radius: 3px;
+}
+.p-analytics .chart-legend {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.8rem;
+  font-size: 0.78rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+.p-analytics .chart-legend span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.p-analytics .chart-legend span::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+.p-analytics .chart-legend .fb::before {
+  background: #1877f2;
+}
+.p-analytics .chart-legend .ig::before {
+  background: linear-gradient(45deg, #f09433, #dc2743);
+}
+.p-analytics .chart-legend .x::before {
+  background: #000;
+}
+.p-analytics .bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.p-analytics .bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+}
+.p-analytics .bar .l {
+  width: 130px;
+  font-weight: 600;
+}
+.p-analytics .bar .t {
+  flex: 1;
+  height: 10px;
+  background: var(--paper-2);
+  border: 1px solid var(--ink);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.p-analytics .bar .t > div {
+  height: 100%;
+  background: var(--accent);
+}
+.p-analytics .bar .v {
+  width: 60px;
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+}
+.p-analytics .pie {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--accent) 0 42%,
+    var(--lime) 42% 70%,
+    var(--forest) 70% 88%,
+    var(--ink) 88% 100%
+  );
+  margin: 0 auto;
+}

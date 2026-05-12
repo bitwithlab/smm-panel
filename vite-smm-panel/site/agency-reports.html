@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — Agency reports</title><link rel="stylesheet" href="shared.css">
+<style>
+.reports-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:900px){.reports-grid{grid-template-columns:1fr}}
+.rep-card{background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;padding:1.2rem;display:flex;flex-direction:column;gap:.7rem}
+.rep-head{display:flex;justify-content:space-between;align-items:flex-start}
+.rep-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600}
+.rep-sub{font-size:.8rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:.15rem}
+.rep-preview{aspect-ratio:4/3;background:var(--paper);border:1.5px solid var(--ink);border-radius:8px;position:relative;overflow:hidden;padding:.9rem;font-size:.65rem}
+.rp-h{display:flex;justify-content:space-between;padding-bottom:.35rem;border-bottom:1px solid var(--ink);margin-bottom:.45rem;font-family:'Fraunces',serif;font-weight:700;font-size:.75rem}
+.rp-bars{display:flex;gap:3px;align-items:flex-end;height:48px;margin:.5rem 0}
+.rp-bars span{flex:1;background:var(--accent);border-radius:1px}
+.rp-row{display:flex;justify-content:space-between;padding:.2rem 0;border-bottom:1px dashed var(--line-2);font-family:'JetBrains Mono',monospace}
+.rep-foot{display:flex;gap:.4rem;margin-top:auto}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow <span class="chip accent" style="font-size:.6rem;margin-left:.3rem">Agency</span></a>
+<div class="sb-group">Agency</div>
+<a href="agency-clients.html" class="sb-item"><span class="sb-ico">◈</span>Clients<span class="chip" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">12</span></a>
+<a href="agency-whitelabel.html" class="sb-item"><span class="sb-ico">◇</span>White-label</a>
+<a href="agency-reports.html" class="sb-item active"><span class="sb-ico">◫</span>Reports</a>
+<div class="sb-group">Workspace</div>
+<a href="app-overview.html" class="sb-item"><span class="sb-ico">◆</span>Overview</a>
+<a href="app-queue.html" class="sb-item"><span class="sb-ico">⎘</span>Queue</a>
+<a href="app-analytics.html" class="sb-item"><span class="sb-ico">◫</span>Analytics</a>
+<div class="sb-group">Account</div>
+<a href="app-billing.html" class="sb-item"><span class="sb-ico">৳</span>Billing</a>
+<a href="app-settings.html" class="sb-item"><span class="sb-ico">⚙</span>Settings</a>
+<div class="sb-foot"><div class="sb-avatar" style="background:var(--forest);color:var(--cream)">M</div><div><div style="font-weight:600">Mehedi · Orbit Agency</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Agency plan · 12 seats</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Agency</span><span class="sep">/</span><b>Reports</b></div>
+<div class="app-search">🔍<input placeholder="Search reports…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><button class="btn sm">Bulk email</button><button class="btn sm primary">+ New report</button></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>Reports</h1><p>Branded PDFs generated per client · schedule, email, archive.</p></div>
+<div class="page-head-actions"><span class="chip solid">Weekly · 12</span><span class="chip">Monthly · 4</span><span class="chip">Ad-hoc · 3</span></div></div>
+
+<div class="card" style="margin-bottom:1.25rem">
+<div class="card-head"><div><div class="card-title">Auto-schedule</div><div class="card-sub">Weekly reports emailed every Monday at 9am BST · branded as "Orbit Growth"</div></div>
+<div class="switch on"></div></div>
+</div>
+
+<div class="reports-grid">
+
+<div class="rep-card">
+<div class="rep-head"><div><div class="rep-title">Rahim Fashion · Weekly</div><div class="rep-sub">Apr 18 – 24, 2026 · #RP-0418-RFH</div></div><span class="chip dot">Sent</span></div>
+<div class="rep-preview">
+<div class="rp-h"><span>ORBIT GROWTH</span><span>Weekly · Apr 18–24</span></div>
+<div style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.2rem">Rahim Fashion House</div>
+<div style="color:var(--muted);margin-bottom:.4rem">First-hour velocity up 12 points</div>
+<div class="rp-bars"><span style="height:35%"></span><span style="height:55%"></span><span style="height:48%"></span><span style="height:62%"></span><span style="height:71%"></span><span style="height:58%"></span><span style="height:82%"></span></div>
+<div class="rp-row"><span>Posts monitored</span><b>5</b></div>
+<div class="rp-row"><span>Avg first-hour</span><b>71%</b></div>
+<div class="rp-row"><span>Reach</span><b>24.6K</b></div>
+<div class="rp-row"><span>Reply rate</span><b>64%</b></div>
+</div>
+<div class="rep-foot"><button class="btn sm ghost">Preview</button><button class="btn sm">PDF ↓</button><button class="btn sm primary">Re-send</button></div>
+</div>
+
+<div class="rep-card">
+<div class="rep-head"><div><div class="rep-title">Nusrat Beauty · Weekly</div><div class="rep-sub">Apr 18 – 24, 2026 · #RP-0418-NBC</div></div><span class="chip dot">Sent</span></div>
+<div class="rep-preview">
+<div class="rp-h"><span>ORBIT GROWTH</span><span>Weekly · Apr 18–24</span></div>
+<div style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.2rem">Nusrat Beauty Co.</div>
+<div style="color:var(--muted);margin-bottom:.4rem">Ultra plan · strongest week in Q2</div>
+<div class="rp-bars"><span style="height:55%"></span><span style="height:68%"></span><span style="height:74%"></span><span style="height:71%"></span><span style="height:80%"></span><span style="height:85%"></span><span style="height:92%"></span></div>
+<div class="rp-row"><span>Posts monitored</span><b>8</b></div>
+<div class="rp-row"><span>Avg first-hour</span><b>78%</b></div>
+<div class="rp-row"><span>Reach</span><b>42.8K</b></div>
+<div class="rp-row"><span>Reply rate</span><b>71%</b></div>
+</div>
+<div class="rep-foot"><button class="btn sm ghost">Preview</button><button class="btn sm">PDF ↓</button><button class="btn sm primary">Re-send</button></div>
+</div>
+
+<div class="rep-card">
+<div class="rep-head"><div><div class="rep-title">Dhaka Bites · Weekly</div><div class="rep-sub">Apr 18 – 24, 2026 · #RP-0418-DB</div></div><span class="chip dot warn">Scheduled</span></div>
+<div class="rep-preview">
+<div class="rp-h"><span>ORBIT GROWTH</span><span>Weekly · Apr 18–24</span></div>
+<div style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.2rem">Dhaka Bites Restaurant</div>
+<div style="color:var(--muted);margin-bottom:.4rem">Steady week · 3 posts reviewed</div>
+<div class="rp-bars"><span style="height:28%"></span><span style="height:35%"></span><span style="height:42%"></span><span style="height:38%"></span><span style="height:48%"></span><span style="height:52%"></span><span style="height:58%"></span></div>
+<div class="rp-row"><span>Posts monitored</span><b>3</b></div>
+<div class="rp-row"><span>Avg first-hour</span><b>58%</b></div>
+<div class="rp-row"><span>Reach</span><b>9.4K</b></div>
+<div class="rp-row"><span>Reply rate</span><b>52%</b></div>
+</div>
+<div class="rep-foot"><button class="btn sm ghost">Preview</button><button class="btn sm">PDF ↓</button><button class="btn sm primary">Send now</button></div>
+</div>
+
+<div class="rep-card">
+<div class="rep-head"><div><div class="rep-title">Monthly · April rollup</div><div class="rep-sub">All 12 clients · Apr 1 – 30, 2026</div></div><span class="chip">Draft</span></div>
+<div class="rep-preview">
+<div class="rp-h"><span>ORBIT GROWTH</span><span>April 2026 rollup</span></div>
+<div style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;margin-bottom:.2rem">Portfolio summary</div>
+<div style="color:var(--muted);margin-bottom:.4rem">12 clients · 284 posts handled</div>
+<div class="rp-bars"><span style="height:42%;background:#1877f2"></span><span style="height:55%;background:linear-gradient(45deg,#f09433,#dc2743)"></span><span style="height:38%;background:#000"></span><span style="height:62%;background:#1877f2"></span><span style="height:48%;background:linear-gradient(45deg,#f09433,#dc2743)"></span><span style="height:32%;background:#000"></span><span style="height:70%;background:#1877f2"></span></div>
+<div class="rp-row"><span>Total posts</span><b>284</b></div>
+<div class="rp-row"><span>Avg first-hour</span><b>69%</b></div>
+<div class="rp-row"><span>MRR</span><b>৳68.4K</b></div>
+<div class="rp-row"><span>NPS</span><b>54</b></div>
+</div>
+<div class="rep-foot"><button class="btn sm">Edit</button><button class="btn sm primary">Generate & send</button></div>
+</div>
+
+</div>
+
+</div></div></div></body></html>

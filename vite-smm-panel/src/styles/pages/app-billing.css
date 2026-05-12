@@ -1,0 +1,98 @@
+.p-billing .grid-2 {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 900px) {
+  .p-billing .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+.p-billing .plan-cur {
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+.p-billing .plan-cur h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.p-billing .plan-cur .sub {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+}
+.p-billing .meter {
+  height: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  overflow: hidden;
+  margin: 1rem 0 0.4rem;
+}
+.p-billing .meter > div {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--lime));
+  width: 60%;
+}
+.p-billing .next {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  margin-top: 1rem;
+}
+.p-billing .pay-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.p-billing .pm {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  background: var(--cream);
+}
+.p-billing .pm .ico {
+  width: 44px;
+  height: 28px;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 0.72rem;
+  color: white;
+}
+.p-billing .pm.bk .ico {
+  background: #e2136e;
+}
+.p-billing .pm.ng .ico {
+  background: #eb6608;
+}
+.p-billing .pm.cd .ico {
+  background: var(--ink);
+}
+.p-billing .pm .t {
+  flex: 1;
+  font-size: 0.88rem;
+}
+.p-billing .pm .t .v {
+  font-weight: 600;
+}
+.p-billing .pm .t .m {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.p-billing .pm.on {
+  border-width: 2px;
+  background: var(--lime);
+}

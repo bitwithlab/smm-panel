@@ -1,0 +1,160 @@
+.p-login {
+  background: var(--paper-2);
+  min-height: 100vh;
+}
+.p-login .split {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  min-height: 100vh;
+}
+@media (max-width: 900px) {
+  .p-login .split {
+    grid-template-columns: 1fr;
+  }
+}
+.p-login .left {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.p-login .left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(255, 77, 31, 0.2), transparent 60%);
+}
+.p-login .left .logo {
+  color: var(--cream);
+  position: relative;
+  z-index: 2;
+}
+.p-login .quote {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+}
+.p-login .quote q {
+  font-family: 'Fraunces', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.25;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.p-login .quote q::before,
+.p-login .quote q::after {
+  color: var(--accent);
+}
+.p-login .quote cite {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-style: normal;
+}
+.p-login .brand-stats {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.p-login .brand-stats div {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.p-login .brand-stats .l {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  margin-top: 0.1rem;
+}
+
+.p-login .right {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-login .login-box {
+  width: 100%;
+  max-width: 400px;
+}
+.p-login .login-box h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+.p-login .login-box p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 2rem;
+}
+.p-login .social {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+.p-login .social .btn {
+  justify-content: center;
+  font-size: 0.82rem;
+  padding: 0.65rem;
+}
+.p-login .sep {
+  text-align: center;
+  margin: 1rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  position: relative;
+}
+.p-login .sep::before,
+.p-login .sep::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 42%;
+  height: 1px;
+  background: var(--line-2);
+}
+.p-login .sep::before {
+  left: 0;
+}
+.p-login .sep::after {
+  right: 0;
+}
+.p-login .remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+}
+.p-login .remember a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.p-login .foot {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.p-login .foot a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — Activity log</title><link rel="stylesheet" href="shared.css">
+<style>
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.stream{background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;overflow:hidden}
+.log-row{display:grid;grid-template-columns:120px 32px 1fr 120px 100px;gap:1rem;padding:.85rem 1.2rem;border-bottom:1px solid var(--line);align-items:center;font-size:.88rem}
+.log-row:last-child{border-bottom:none}
+.log-row:hover{background:var(--paper-2)}
+.log-time{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--muted)}
+.log-ico{width:28px;height:28px;border-radius:7px;display:grid;place-items:center;font-weight:700;font-size:.75rem;background:var(--paper-2);border:1.5px solid var(--ink)}
+.log-ico.ok{background:var(--lime)}
+.log-ico.warn{background:#fff3cd}
+.log-ico.bad{background:#fde4e4}
+.log-ico.scan{background:var(--accent)}
+.log-body b{font-weight:600}
+.log-body .sub{font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:.15rem}
+.log-seat{font-size:.8rem;color:var(--muted)}
+@media(max-width:700px){.log-row{grid-template-columns:1fr}}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow</a>
+<div class="sb-group">Workspace</div>
+<a href="app-overview.html" class="sb-item"><span class="sb-ico">◆</span>Overview</a>
+<a href="app-targets.html" class="sb-item"><span class="sb-ico">◎</span>Targets</a>
+<a href="app-queue.html" class="sb-item"><span class="sb-ico">⎘</span>Response queue<span class="chip accent" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">7</span></a>
+<a href="app-comments.html" class="sb-item"><span class="sb-ico">✎</span>Comment library</a>
+<div class="sb-group">Insights</div>
+<a href="app-analytics.html" class="sb-item"><span class="sb-ico">◫</span>Analytics</a>
+<a href="app-activity.html" class="sb-item active"><span class="sb-ico">☰</span>Activity log</a>
+<div class="sb-group">Account</div>
+<a href="app-billing.html" class="sb-item"><span class="sb-ico">৳</span>Billing</a>
+<a href="app-settings.html" class="sb-item"><span class="sb-ico">⚙</span>Settings</a>
+<div class="sb-foot"><div class="sb-avatar">N</div><div><div style="font-weight:600">Nusrat J.</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Standard plan</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Insights</span><span class="sep">/</span><b>Activity log</b></div>
+<div class="app-search">🔍<input placeholder="Search log…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><button class="btn sm">Export CSV</button></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>Activity log</h1><p>Every action — human or automated — on your workspace.</p></div><div class="page-head-actions"><button class="btn sm">Last 7 days</button></div></div>
+
+<div class="filters">
+<span class="chip solid">All · 142</span>
+<span class="chip">Replies sent · 42</span>
+<span class="chip">Scans · 68</span>
+<span class="chip">Approvals · 28</span>
+<span class="chip">Warnings · 4</span>
+</div>
+
+<div class="stream">
+
+<div class="log-row"><div class="log-time">14:32 · Apr 24</div><div class="log-ico ok">✓</div><div class="log-body"><b>Reply sent</b> · "Loving the color story on this drop…" to post <b>#fb_18472</b><div class="sub">@rahimfashionhouse · approved by Nusrat J.</div></div><span class="chip dot">Delivered</span><span class="log-seat">Nusrat J.</span></div>
+
+<div class="log-row"><div class="log-time">14:30 · Apr 24</div><div class="log-ico scan">⟳</div><div class="log-body"><b>Facebook scan</b> completed · 1 new post detected<div class="sub">6 posts scanned · 4.2s · scheduler</div></div><span class="chip">Auto</span><span class="log-seat">System</span></div>
+
+<div class="log-row"><div class="log-time">14:28 · Apr 24</div><div class="log-ico ok">✓</div><div class="log-body"><b>Approval granted</b> · 3 AI drafts reviewed and 1 chosen<div class="sub">Post #fb_18472 · draft variant A (warm)</div></div><span class="chip">Approval</span><span class="log-seat">Nusrat J.</span></div>
+
+<div class="log-row"><div class="log-time">13:18 · Apr 24</div><div class="log-ico ok">✓</div><div class="log-body"><b>Reply sent</b> · "In stock, all three sizes…" to post <b>#ig_3422</b><div class="sub">@rahim.store.bd · approved by Ayesha R.</div></div><span class="chip dot">Delivered</span><span class="log-seat">Ayesha R.</span></div>
+
+<div class="log-row"><div class="log-time">12:45 · Apr 24</div><div class="log-ico warn">!</div><div class="log-body"><b>Rate limit warning</b> · @rahim_live near daily ceiling (18/20)<div class="sub">Throttling enabled · next reply available 13:15</div></div><span class="chip dot warn">Warning</span><span class="log-seat">System</span></div>
+
+<div class="log-row"><div class="log-time">11:02 · Apr 24</div><div class="log-ico ok">✓</div><div class="log-body"><b>Reply sent</b> · "দারুণ কালেকশন! সাইজ কি…" to post <b>#fb_18431</b><div class="sub">@rahimfashionhouse · approved by Nusrat J.</div></div><span class="chip dot">Delivered</span><span class="log-seat">Nusrat J.</span></div>
+
+<div class="log-row"><div class="log-time">10:15 · Apr 24</div><div class="log-ico scan">⟳</div><div class="log-body"><b>Instagram scan</b> completed · 2 new posts detected<div class="sub">8 posts scanned · 3.8s · scheduler</div></div><span class="chip">Auto</span><span class="log-seat">System</span></div>
+
+<div class="log-row"><div class="log-time">09:42 · Apr 24</div><div class="log-ico bad">✕</div><div class="log-body"><b>Reply failed</b> · Comment thread locked by page admin<div class="sub">Post #fb_18399 · retry queued for 10:42</div></div><span class="chip dot bad">Failed</span><span class="log-seat">System</span></div>
+
+<div class="log-row"><div class="log-time">09:30 · Apr 24</div><div class="log-ico ok">✓</div><div class="log-body"><b>New target added</b> · @rahim.chittagong (Instagram)<div class="sub">OAuth grant · 4.4K followers</div></div><span class="chip">Config</span><span class="log-seat">Nusrat J.</span></div>
+
+<div class="log-row"><div class="log-time">08:00 · Apr 24</div><div class="log-ico scan">⟳</div><div class="log-body"><b>Daily digest emailed</b> · 3 posts reviewed overnight<div class="sub">Sent to nusrat@fashionhouse.bd</div></div><span class="chip">Email</span><span class="log-seat">System</span></div>
+
+<div class="log-row"><div class="log-time">23:00 · Apr 23</div><div class="log-ico scan">⟳</div><div class="log-body"><b>X/Twitter scan</b> completed · 1 new post detected<div class="sub">4 posts scanned · 2.1s</div></div><span class="chip">Auto</span><span class="log-seat">System</span></div>
+
+</div>
+
+<div style="text-align:center;margin-top:1.5rem"><button class="btn">Load earlier activity</button></div>
+
+</div></div></div></body></html>

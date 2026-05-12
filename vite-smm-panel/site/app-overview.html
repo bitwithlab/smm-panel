@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EngageFlow — Overview</title><link rel="stylesheet" href="shared.css">
+<style>
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem}
+.grid-2{display:grid;grid-template-columns:2fr 1fr;gap:1.25rem}
+@media(max-width:900px){.grid-4,.grid-2{grid-template-columns:1fr}}
+.brief{background:var(--ink);color:var(--cream);border-radius:14px;padding:1.5rem 1.75rem;margin-bottom:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.brief h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:500;letter-spacing:-.02em}
+.brief p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:.2rem}
+.brief .chip{background:var(--lime);color:var(--ink);border:none}
+.feed-item{display:flex;gap:.9rem;padding:.9rem 0;border-bottom:1px dashed var(--line-2)}
+.feed-item:last-child{border-bottom:none}
+.feed-item .meta{flex:1;min-width:0}
+.feed-item .h{font-weight:600;font-size:.9rem;display:flex;gap:.5rem;align-items:center}
+.feed-item .sub{font-size:.78rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:.2rem}
+.bar-h{height:6px;background:var(--paper-2);border-radius:3px;overflow:hidden;margin-top:.5rem}
+.bar-h>div{height:100%;background:linear-gradient(90deg,var(--accent),var(--lime))}
+.quick{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem}
+.quick a{background:var(--paper);border:1.5px solid var(--ink);padding:.7rem;border-radius:8px;text-decoration:none;color:inherit;font-size:.85rem;display:flex;align-items:center;gap:.5rem}
+.quick a:hover{background:var(--accent)}
+.spark{height:44px;display:flex;align-items:flex-end;gap:3px;margin-top:.5rem}
+.spark span{flex:1;background:var(--ink);border-radius:2px 2px 0 0;min-height:4px;opacity:.7}
+.spark span.hi{background:var(--accent);opacity:1}
+</style></head>
+<body class="grain"><div class="app">
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow</a>
+<div class="sb-group">Workspace</div>
+<a href="app-overview.html" class="sb-item active"><span class="sb-ico">◆</span>Overview</a>
+<a href="app-targets.html" class="sb-item"><span class="sb-ico">◎</span>Targets</a>
+<a href="app-queue.html" class="sb-item"><span class="sb-ico">⎘</span>Response queue<span class="chip accent" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">7</span></a>
+<a href="app-comments.html" class="sb-item"><span class="sb-ico">✎</span>Comment library</a>
+<div class="sb-group">Insights</div>
+<a href="app-analytics.html" class="sb-item"><span class="sb-ico">◫</span>Analytics</a>
+<a href="app-activity.html" class="sb-item"><span class="sb-ico">☰</span>Activity log</a>
+<div class="sb-group">Account</div>
+<a href="app-billing.html" class="sb-item"><span class="sb-ico">৳</span>Billing</a>
+<a href="app-settings.html" class="sb-item"><span class="sb-ico">⚙</span>Settings</a>
+<div class="sb-foot"><div class="sb-avatar">N</div><div><div style="font-weight:600">Nusrat J.</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Standard plan</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>EngageFlow</span><span class="sep">/</span><b>Overview</b></div>
+<div class="app-search">🔍<input placeholder="Search posts, comments, targets…"></div>
+<div class="app-top-right">
+<button class="iconbtn">🔔</button><button class="iconbtn">⚙</button>
+<a href="app-queue.html" class="btn sm primary">Open queue →</a>
+</div>
+</div>
+
+<div class="app-body">
+
+<div class="brief">
+<div><h2>Good morning, Nusrat 👋</h2><p>3 new posts detected in the last hour · 7 items waiting in your queue · next scan in 04:12</p></div>
+<span class="chip">All systems on track</span>
+</div>
+
+<div class="grid-4">
+<div class="stat accent"><div class="stat-lbl">Posts this month</div><div class="stat-num">12 / 20</div><div class="stat-delta up">▲ 3 this week</div></div>
+<div class="stat lime"><div class="stat-lbl">Quota remaining</div><div class="stat-num">08</div><div class="stat-delta">Resets May 17</div></div>
+<div class="stat"><div class="stat-lbl">Active targets</div><div class="stat-num">04</div><div class="stat-delta">FB · IG · X · IG</div></div>
+<div class="stat dark"><div class="stat-lbl">On-time response</div><div class="stat-num">94%</div><div class="stat-delta up">▲ 6pts vs last wk</div></div>
+</div>
+
+<div class="grid-2">
+<div class="card">
+<div class="card-head"><div><div class="card-title">Live feed</div><div class="card-sub">Posts detected in the last 24 hours</div></div>
+<div style="display:flex;gap:.4rem"><button class="chip">All</button><button class="chip solid">FB</button><button class="chip">IG</button><button class="chip">X</button></div></div>
+
+<div class="feed-item"><div class="plat fb">f</div><div class="meta"><div class="h">@rahimfashionhouse <span class="badge">New post</span></div><div class="sub">42 min ago · 184 reactions · 34 comments · first-hour velocity 68%</div><div class="bar-h"><div style="width:68%"></div></div></div><a href="app-queue.html" class="btn sm">Review →</a></div>
+
+<div class="feed-item"><div class="plat ig">◉</div><div class="meta"><div class="h">@rahim.store.bd</div><div class="sub">2 hr ago · 312 likes · 47 comments · first-hour velocity 82%</div><div class="bar-h"><div style="width:82%"></div></div></div><a href="app-queue.html" class="btn sm">Review →</a></div>
+
+<div class="feed-item"><div class="plat x">𝕏</div><div class="meta"><div class="h">@rahim_live <span class="chip dot warn">Needs reply</span></div><div class="sub">1 hr ago · 2.1K impressions · 89 likes · 23 replies</div><div class="bar-h"><div style="width:55%"></div></div></div><a href="app-queue.html" class="btn sm primary">Reply →</a></div>
+
+<div class="feed-item"><div class="plat ig">◉</div><div class="meta"><div class="h">@rahim.store.bd</div><div class="sub">4 hr ago · 212 likes · 19 comments · velocity 71%</div><div class="bar-h"><div style="width:71%"></div></div></div><a href="app-queue.html" class="btn sm">Review →</a></div>
+
+<div class="feed-item"><div class="plat fb">f</div><div class="meta"><div class="h">@rahimfashionhouse</div><div class="sub">6 hr ago · 96 reactions · 12 comments · velocity 44%</div><div class="bar-h"><div style="width:44%"></div></div></div><a href="app-queue.html" class="btn sm">Review →</a></div>
+</div>
+
+<div>
+<div class="card" style="margin-bottom:1rem">
+<div class="card-title">7-day velocity</div>
+<div class="card-sub">First-hour engagement index</div>
+<div class="spark">
+<span style="height:35%"></span><span style="height:55%"></span><span style="height:48%"></span><span style="height:62%" class="hi"></span><span style="height:71%" class="hi"></span><span style="height:58%"></span><span style="height:82%" class="hi"></span>
+</div>
+<div style="display:flex;justify-content:space-between;margin-top:.4rem;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--muted)"><span>Apr 18</span><span>Apr 24</span></div>
+</div>
+
+<div class="card" style="margin-bottom:1rem">
+<div class="card-title">Quick actions</div>
+<div class="card-sub" style="margin-bottom:1rem">Shortcuts for your team</div>
+<div class="quick">
+<a href="app-queue.html">⎘ Open queue</a>
+<a href="app-comments.html">✎ New reply</a>
+<a href="app-targets.html">◎ Add target</a>
+<a href="app-analytics.html">◫ View reports</a>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">Today's schedule</div>
+<div class="card-sub">Next auto-scans</div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:.82rem;line-height:1.9;color:var(--muted)">
+→ 14:45 · Facebook scan<br>
+→ 15:30 · Instagram scan<br>
+→ 16:15 · X/Twitter scan<br>
+→ 23:00 · Daily digest email
+</div>
+</div>
+</div>
+</div>
+
+</div></div></div></body></html>

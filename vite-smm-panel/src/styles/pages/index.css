@@ -1,0 +1,183 @@
+.p-index {
+  background: var(--paper);
+}
+.p-index .sitemap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+.p-index .hero-index {
+  padding: 3rem 0 2rem;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 3rem;
+}
+.p-index .hero-index h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  max-width: 900px;
+}
+.p-index .hero-index h1 em {
+  color: var(--accent);
+  font-style: italic;
+}
+.p-index .hero-index p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-top: 1rem;
+  max-width: 620px;
+}
+.p-index .hero-meta {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.p-index .hero-meta b {
+  color: var(--ink);
+  font-weight: 600;
+}
+.p-index .group {
+  margin-bottom: 3rem;
+}
+.p-index .group-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.p-index .group-head h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.p-index .group-head .count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.p-index .group-head .role {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.7rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.p-index .group.public .role {
+  background: var(--lime);
+}
+.p-index .group.customer .role {
+  background: var(--accent);
+  color: var(--ink);
+}
+.p-index .group.agency .role {
+  background: var(--forest);
+  color: var(--cream);
+}
+.p-index .group.admin .role {
+  background: var(--ink);
+  color: var(--cream);
+}
+.p-index .pages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 1000px) {
+  .p-index .pages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.p-index .page-card {
+  background: var(--cream);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.15s;
+}
+.p-index .page-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.p-index .page-thumb {
+  aspect-ratio: 16/10;
+  background: var(--paper-2);
+  border-bottom: 1.5px solid var(--ink);
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.p-index .page-card.featured .page-thumb {
+  background: linear-gradient(135deg, var(--accent), #ff7a52);
+}
+.p-index .page-card.dark .page-thumb {
+  background: var(--ink);
+  color: var(--cream);
+}
+.p-index .page-card.forest .page-thumb {
+  background: var(--forest);
+  color: var(--cream);
+}
+.p-index .page-card.lime .page-thumb {
+  background: var(--lime);
+}
+.p-index .thumb-icon {
+  font-family: 'Fraunces', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  opacity: 0.85;
+}
+.p-index .thumb-num {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  opacity: 0.55;
+  font-weight: 600;
+}
+.p-index .thumb-tag {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.p-index .page-card.dark .thumb-tag,
+.p-index .page-card.forest .thumb-tag {
+  background: rgba(255, 255, 255, 0.15);
+}
+.p-index .page-meta {
+  padding: 0.9rem 1rem;
+}
+.p-index .page-meta h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+.p-index .page-meta p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}

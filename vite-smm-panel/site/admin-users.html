@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — Admin · Users</title><link rel="stylesheet" href="shared.css">
+<style>
+.kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-bottom:1.5rem}
+@media(max-width:1100px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+.user-avatar{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.75rem;color:white;border:1.5px solid var(--ink)}
+.filter-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center}
+.filter-row .sp{flex:1}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow <span class="chip" style="font-size:.6rem;margin-left:.3rem;background:var(--ink);color:var(--cream);border-color:var(--ink)">Admin</span></a>
+<div class="sb-group">Platform</div>
+<a href="admin-users.html" class="sb-item active"><span class="sb-ico">◉</span>Users<span class="chip" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">2.4K</span></a>
+<a href="admin-compliance.html" class="sb-item"><span class="sb-ico">⚠</span>Compliance<span class="chip accent" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">4</span></a>
+<a href="admin-ops.html" class="sb-item"><span class="sb-ico">◆</span>Operations</a>
+<div class="sb-group">Revenue</div>
+<a href="admin-ops.html" class="sb-item"><span class="sb-ico">৳</span>Revenue</a>
+<a href="admin-ops.html" class="sb-item"><span class="sb-ico">☰</span>Audit log</a>
+<div class="sb-foot"><div class="sb-avatar" style="background:var(--ink);color:var(--accent)">A</div><div><div style="font-weight:600">Arif Hasan</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Platform admin</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Platform</span><span class="sep">/</span><b>Users</b></div>
+<div class="app-search">🔍<input placeholder="Search by email, workspace, phone…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><button class="btn sm">Export CSV</button></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>Users</h1><p>All workspaces across the platform · Bangladesh-first · 2,423 active.</p></div></div>
+
+<div class="kpi-row">
+<div class="stat"><div class="stat-lbl">Total users</div><div class="stat-num">2,423</div><div class="stat-delta up">▲ 284 MoM</div></div>
+<div class="stat accent"><div class="stat-lbl">Paying</div><div class="stat-num">1,847</div><div class="stat-delta up">▲ 22%</div></div>
+<div class="stat lime"><div class="stat-lbl">MRR</div><div class="stat-num">৳4.82L</div><div class="stat-delta up">▲ ৳82K</div></div>
+<div class="stat"><div class="stat-lbl">Churn (30d)</div><div class="stat-num">4.8%</div><div class="stat-delta">Target &lt;6%</div></div>
+<div class="stat dark"><div class="stat-lbl">NPS</div><div class="stat-num">54</div><div class="stat-delta up">▲ 3</div></div>
+</div>
+
+<div class="filter-row">
+<span class="chip solid">All · 2,423</span>
+<span class="chip">Trial · 156</span>
+<span class="chip">Basic · 842</span>
+<span class="chip">Standard · 871</span>
+<span class="chip">Ultra · 122</span>
+<span class="chip">Agency · 12</span>
+<div class="sp"></div>
+<span class="chip dot warn">Risk · 18</span>
+<span class="chip dot bad">Suspended · 7</span>
+</div>
+
+<div class="card">
+<table class="tbl">
+<thead><tr><th>User</th><th>Plan</th><th>Workspace</th><th>Posts · month</th><th>MRR</th><th>Joined</th><th>Status</th><th></th></tr></thead>
+<tbody>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:var(--accent)">N</div><div><b>Nusrat Jahan</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">nusrat@fashionhouse.bd</div></div></div></td><td><span class="chip">Standard</span></td><td>Rahim Fashion</td><td>12/20</td><td>৳199</td><td>Dec 17</td><td><span class="chip dot">Active</span></td><td><button class="btn sm ghost">View</button></td></tr>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:var(--forest)">M</div><div><b>Mehedi Hassan</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">mehedi@orbitagency.bd</div></div></div></td><td><span class="chip accent">Agency</span></td><td>Orbit Growth</td><td>284/∞</td><td>৳2,499</td><td>Feb 02</td><td><span class="chip dot">Active</span></td><td><button class="btn sm ghost">View</button></td></tr>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:#e11d48">S</div><div><b>Shakib Chowdhury</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">shakib@dhakabites.co</div></div></div></td><td><span class="chip">Basic</span></td><td>Dhaka Bites</td><td>6/10</td><td>৳99</td><td>Mar 18</td><td><span class="chip dot">Active</span></td><td><button class="btn sm ghost">View</button></td></tr>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:#7c3aed">R</div><div><b>Runa Khatun</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">runa.darazbd@gmail.com</div></div></div></td><td><span class="chip">Standard</span></td><td>Runa Daraz Seller</td><td>16/20</td><td>৳199</td><td>Jan 29</td><td><span class="chip dot">Active</span></td><td><button class="btn sm ghost">View</button></td></tr>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:#2563eb">T</div><div><b>Tanveer Rahman</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">tanveer@techshopbd.com</div></div></div></td><td><span class="chip accent">Ultra</span></td><td>TechShop BD</td><td>19/30</td><td>৳399</td><td>Feb 11</td><td><span class="chip dot warn">Risk · retry spike</span></td><td><button class="btn sm">Review</button></td></tr>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:#f59e0b">Z</div><div><b>Zarin Islam</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">zarin@craftcotton.bd</div></div></div></td><td><span class="chip accent">Ultra</span></td><td>Craft & Cotton</td><td>28/30</td><td>৳399</td><td>Dec 03</td><td><span class="chip dot">Active</span></td><td><button class="btn sm ghost">View</button></td></tr>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:var(--bad)">K</div><div><b>Karim Uddin</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">karim.shop@hotmail.com</div></div></div></td><td><span class="chip">Standard</span></td><td>Karim Boutique</td><td>0/20</td><td>৳199</td><td>Mar 28</td><td><span class="chip dot bad">Suspended · ToS flag</span></td><td><button class="btn sm">Review</button></td></tr>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:#17803d">F</div><div><b>Fahim Ahmed</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">fahim@chapkinbd.com</div></div></div></td><td><span class="chip">Standard</span></td><td>ChapkinBD</td><td>14/20</td><td>৳199</td><td>Jan 15</td><td><span class="chip dot">Active</span></td><td><button class="btn sm ghost">View</button></td></tr>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:var(--muted)">P</div><div><b>Priya Das</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">priya@luxedhaka.store</div></div></div></td><td><span class="chip">Standard</span></td><td>LuxeDhaka</td><td>—</td><td>৳199</td><td>Nov 22</td><td><span class="chip dot idle">Paused</span></td><td><button class="btn sm ghost">View</button></td></tr>
+
+<tr><td><div style="display:flex;align-items:center;gap:.6rem"><div class="user-avatar" style="background:#dc2743">A</div><div><b>Ayesha Rahman</b><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">ayesha.demo@gmail.com</div></div></div></td><td><span class="chip">Trial</span></td><td>Personal creator</td><td>3/5 trial</td><td>—</td><td>Apr 22</td><td><span class="chip dot">Trial · day 2</span></td><td><button class="btn sm ghost">View</button></td></tr>
+
+</tbody></table>
+<div style="display:flex;justify-content:space-between;padding:1rem;border-top:1px dashed var(--line-2);font-size:.82rem;font-family:'JetBrains Mono',monospace"><span>1–10 of 2,423</span><div style="display:flex;gap:.4rem"><button class="btn sm ghost">←</button><button class="btn sm">1</button><button class="btn sm ghost">2</button><button class="btn sm ghost">3</button><button class="btn sm ghost">→</button></div></div>
+</div>
+
+</div></div></div></body></html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EngageFlow — Pricing</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.head{padding:4rem 2rem 3rem;border-bottom:2px solid var(--ink);text-align:center;background:var(--paper-2)}
+.head h1{font-family:'Fraunces',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:500;letter-spacing:-.02em;line-height:1;margin:1rem 0}
+.head h1 em{color:var(--accent);font-style:italic}
+.head p{color:var(--muted);max-width:580px;margin:.5rem auto 1.5rem;font-size:1.05rem}
+.toggle{display:inline-flex;border:2px solid var(--ink);border-radius:100px;padding:.25rem;background:var(--cream);font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:600}
+.toggle button{border:none;padding:.5rem 1.1rem;border-radius:100px;background:transparent;cursor:pointer;font:inherit}
+.toggle button.on{background:var(--ink);color:var(--cream)}
+.toggle .save{margin-left:.4rem;background:var(--lime);color:var(--ink);padding:.15rem .5rem;border-radius:100px;font-size:.65rem}
+
+section{padding:4rem 2rem;border-bottom:2px solid var(--ink)}
+.inner{max-width:1320px;margin:0 auto}
+
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+@media(max-width:960px){.tiers{grid-template-columns:1fr}}
+.tier{background:var(--cream);border:2px solid var(--ink);border-radius:14px;padding:2rem 1.75rem;position:relative;transition:.15s}
+.tier:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
+.tier.fea{background:var(--ink);color:var(--cream);transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--accent)}
+.tier.fea:hover{box-shadow:10px 10px 0 var(--accent)}
+.badge-pop{position:absolute;top:-12px;right:18px;background:var(--accent);color:var(--ink);padding:.3rem .85rem;border:2px solid var(--ink);font-size:.7rem;font-weight:700;font-family:'JetBrains Mono',monospace;transform:rotate(3deg);border-radius:4px}
+.tier h3{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;margin-bottom:.25rem}
+.tier .tag{font-size:.85rem;opacity:.75;margin-bottom:1.25rem}
+.price-row{display:flex;align-items:baseline;gap:.3rem;padding-bottom:1.25rem;margin-bottom:1.25rem;border-bottom:1px dashed currentColor}
+.cur{font-size:1.2rem;opacity:.65}
+.num{font-family:'Fraunces',serif;font-size:3.4rem;font-weight:700;line-height:1}
+.per{font-size:.85rem;opacity:.65;margin-left:.2rem}
+.tier ul{list-style:none;margin-bottom:1.5rem;display:flex;flex-direction:column;gap:.5rem;font-size:.9rem}
+.tier ul li{display:flex;gap:.55rem;align-items:flex-start}
+.tier ul li::before{content:"→";color:var(--accent);font-weight:700;flex-shrink:0}
+.tier.fea ul li::before{color:var(--lime)}
+.tier .btn{width:100%;justify-content:center}
+.tier.fea .btn{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.tier.fea .btn:hover{background:var(--lime);border-color:var(--lime)}
+
+.agency{margin-top:2rem;padding:2rem;background:var(--forest);color:var(--cream);border-radius:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.agency h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;margin-bottom:.3rem}
+.agency p{color:rgba(255,255,255,.65);font-size:.95rem}
+.agency .price{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;line-height:1}
+.agency .price span{font-size:.9rem;opacity:.7}
+
+.addons{background:var(--cream)}
+.addons-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:900px){.addons-grid{grid-template-columns:repeat(2,1fr)}}
+.addon{background:var(--paper);border:1.5px solid var(--ink);border-radius:10px;padding:1.2rem}
+.addon h4{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin-bottom:.3rem}
+.addon p{font-size:.85rem;color:var(--muted);margin-bottom:.9rem;min-height:42px}
+.addon .cost{font-family:'JetBrains Mono',monospace;font-size:.85rem;font-weight:600}
+
+.calc-section{background:var(--paper-2)}
+.calc{background:var(--cream);border:2px solid var(--ink);border-radius:14px;padding:2rem;display:grid;grid-template-columns:1.3fr 1fr;gap:2rem}
+@media(max-width:900px){.calc{grid-template-columns:1fr}}
+.calc-left .field{margin-bottom:1rem}
+.calc-left input[type=range]{width:100%;accent-color:var(--accent)}
+.calc-right{background:var(--ink);color:var(--cream);border-radius:10px;padding:1.5rem}
+.calc-line{display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px dashed rgba(255,255,255,.15);font-size:.9rem}
+.calc-line.total{border-bottom:none;font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;padding-top:1rem;margin-top:.5rem;border-top:1px solid rgba(255,255,255,.3)}
+.calc-line.total .c{color:var(--lime)}
+
+.faq{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:.6rem}
+.faq details{background:var(--cream);border:1.5px solid var(--ink);border-radius:10px;padding:1rem 1.25rem}
+.faq summary{cursor:pointer;list-style:none;font-family:'Fraunces',serif;font-weight:600;display:flex;justify-content:space-between}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";transition:.2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--muted);font-size:.9rem;margin-top:.7rem}
+</style>
+</head>
+<body class="grain">
+<nav class="m-nav">
+  <a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow</a>
+  <div class="m-nav-links"><a href="home.html">Home</a><a href="features.html">Features</a><a href="pricing.html" class="active">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  <div class="m-nav-right"><a href="login.html" class="btn sm ghost">Sign in</a><a href="signup.html" class="btn sm primary">Start trial</a></div>
+</nav>
+
+<div class="head">
+  <span class="eyebrow dot">Transparent pricing · BDT + USD</span>
+  <h1 class="display">Pick your <em>growth speed</em>.</h1>
+  <p>7-day free trial on every plan. No card up front. Cancel any time. Annual plans save 15%.</p>
+  <div class="toggle" role="tablist">
+    <button class="on">Monthly</button>
+    <button>Annual <span class="save">–15%</span></button>
+  </div>
+</div>
+
+<section>
+  <div class="inner">
+    <div class="tiers">
+      <div class="tier">
+        <h3>Basic</h3><div class="tag">Solo sellers, first-time</div>
+        <div class="price-row"><span class="cur">৳</span><span class="num">99</span><span class="per">/mo</span></div>
+        <ul>
+          <li>10 posts monitored / month</li>
+          <li>1 connected platform</li>
+          <li>1 target profile</li>
+          <li>5 library entries</li>
+          <li>Email support · 48 hr</li>
+        </ul>
+        <a href="signup.html" class="btn">Start Basic →</a>
+      </div>
+      <div class="tier fea">
+        <div class="badge-pop">MOST POPULAR</div>
+        <h3>Standard</h3><div class="tag">Growing SMBs + creators</div>
+        <div class="price-row"><span class="cur">৳</span><span class="num">199</span><span class="per">/mo</span></div>
+        <ul>
+          <li>20 posts monitored / month</li>
+          <li>All 3 platforms (FB + IG + X)</li>
+          <li>3 target profiles · 3 team seats</li>
+          <li>20 library entries</li>
+          <li>AI reply drafting</li>
+          <li>Weekly PDF report</li>
+          <li>Priority chat support</li>
+        </ul>
+        <a href="signup.html" class="btn">Start Standard →</a>
+      </div>
+      <div class="tier">
+        <h3>Ultra</h3><div class="tag">Power users + brands</div>
+        <div class="price-row"><span class="cur">৳</span><span class="num">399</span><span class="per">/mo</span></div>
+        <ul>
+          <li>30 posts monitored / month</li>
+          <li>All 3 platforms</li>
+          <li>5 target profiles · 5 team seats</li>
+          <li>Unlimited library entries</li>
+          <li>AI + sentiment filter</li>
+          <li>Competitor benchmarking</li>
+          <li>Daily analytics · 6-hr chat</li>
+        </ul>
+        <a href="signup.html" class="btn">Start Ultra →</a>
+      </div>
+    </div>
+
+    <div class="agency">
+      <div>
+        <h3>Agency</h3>
+        <p>Unlimited clients · White-label panel · Reseller pricing · Dedicated account manager</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:1.5rem">
+        <div class="price">৳2,499<span>/mo</span></div>
+        <a href="contact.html" class="btn primary">Contact sales →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="addons">
+  <div class="inner">
+    <div style="max-width:700px;margin-bottom:2rem">
+      <div class="section-num">Add-ons</div>
+      <h2 class="display" style="font-size:2.2rem;margin-top:.5rem">Scale any plan with extras.</h2>
+    </div>
+    <div class="addons-grid">
+      <div class="addon"><h4>Extra posts</h4><p>Top up 10 more posts / month on any plan.</p><div class="cost">+৳49/mo</div></div>
+      <div class="addon"><h4>Extra target profile</h4><p>Connect one more Facebook, Instagram, or X handle.</p><div class="cost">+৳35/mo</div></div>
+      <div class="addon"><h4>Additional team seat</h4><p>One more teammate with reviewer or editor role.</p><div class="cost">+৳25/mo</div></div>
+      <div class="addon"><h4>Priority proxy pool</h4><p>Dedicated residential IPs for higher-volume accounts.</p><div class="cost">+৳199/mo</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="calc-section">
+  <div class="inner">
+    <div style="max-width:700px;margin-bottom:2rem">
+      <div class="section-num">Size it up</div>
+      <h2 class="display" style="font-size:2.2rem;margin-top:.5rem">Monthly cost estimator.</h2>
+    </div>
+    <div class="calc">
+      <div class="calc-left">
+        <div class="field">
+          <label>Plan</label>
+          <select class="input"><option>Standard · ৳199</option><option>Basic · ৳99</option><option selected>Ultra · ৳399</option><option>Agency · ৳2,499</option></select>
+        </div>
+        <div class="field">
+          <label>Extra posts (×10)</label>
+          <input type="range" min="0" max="10" value="2">
+          <div class="hint mono">2 × 10 = +20 posts</div>
+        </div>
+        <div class="field">
+          <label>Extra target profiles</label>
+          <input type="range" min="0" max="10" value="3">
+          <div class="hint mono">+3 profiles</div>
+        </div>
+        <div class="field">
+          <label>Team seats</label>
+          <input type="range" min="0" max="15" value="4">
+          <div class="hint mono">+4 seats</div>
+        </div>
+        <div class="field">
+          <label>Billing cycle</label>
+          <div style="display:flex;gap:.5rem">
+            <label style="display:flex;gap:.4rem;align-items:center;font-size:.88rem"><input type="radio" name="c" checked>Monthly</label>
+            <label style="display:flex;gap:.4rem;align-items:center;font-size:.88rem"><input type="radio" name="c">Annual (–15%)</label>
+          </div>
+        </div>
+      </div>
+      <div class="calc-right">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:rgba(255,255,255,.5);margin-bottom:1rem">ESTIMATED MONTHLY COST</div>
+        <div class="calc-line"><span>Ultra base</span><span>৳399</span></div>
+        <div class="calc-line"><span>Extra posts · 2 × 10</span><span>৳98</span></div>
+        <div class="calc-line"><span>Target profiles · +3</span><span>৳105</span></div>
+        <div class="calc-line"><span>Team seats · +4</span><span>৳100</span></div>
+        <div class="calc-line total"><span>Estimated</span><span class="c">৳702 / mo</span></div>
+        <a href="signup.html" class="btn primary full" style="margin-top:1.25rem">Start this plan →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper)">
+  <div class="inner">
+    <div style="text-align:center;max-width:600px;margin:0 auto 2rem">
+      <div class="section-num" style="justify-content:center">Pricing FAQ</div>
+      <h2 class="display" style="font-size:2.2rem;margin-top:.5rem">Common questions.</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Can I switch plans mid-month?</summary><p>Yes — upgrade instantly with a prorated charge, or downgrade at your next renewal. No lock-ins, no penalties.</p></details>
+      <details><summary>How does the 7-day trial work?</summary><p>Pick any plan, get full access for 7 days with no card required. We remind you 2 days before the trial ends — add a payment method to continue or let it expire.</p></details>
+      <details><summary>Which payment methods are accepted?</summary><p>bKash, Nagad, Rocket, SSLCommerz card gateway (all major cards), and Stripe for international. Agency plans can invoice in USD.</p></details>
+      <details><summary>What counts as one "post monitored"?</summary><p>Any new post published to a connected target profile that we detect in a 24-hour window. Edits and reposts of the same post don't count twice.</p></details>
+      <details><summary>Is there a student or NGO discount?</summary><p>30% off Standard for verified students and registered NGOs. Email sales@engageflow.app with your affiliation.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><a href="index.html" class="logo" style="color:var(--cream)"><span class="logo-mark"></span>EngageFlow</a><p style="color:rgba(255,255,255,.55);font-size:.85rem;margin-top:.75rem;max-width:260px">First-hour engagement workflows for Bangladeshi SMBs, creators, and agencies.</p></div>
+    <div><h5>Product</h5><ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+    <div><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h5>Resources</h5><ul><li><a href="#">Help</a></li></ul></div>
+    <div><h5>Legal</h5><ul><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><div>© 2026 EngageFlow Technologies Ltd.</div><div>v1.0</div></div>
+</footer>
+</body>
+</html>

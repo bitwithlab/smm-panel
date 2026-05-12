@@ -1,0 +1,335 @@
+.p-pricing .head {
+  padding: 4rem 2rem 3rem;
+  border-bottom: 2px solid var(--ink);
+  text-align: center;
+  background: var(--paper-2);
+}
+.p-pricing .head h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 1rem 0;
+}
+.p-pricing .head h1 em {
+  color: var(--accent);
+  font-style: italic;
+}
+.p-pricing .head p {
+  color: var(--muted);
+  max-width: 580px;
+  margin: 0.5rem auto 1.5rem;
+  font-size: 1.05rem;
+}
+.p-pricing .toggle {
+  display: inline-flex;
+  border: 2px solid var(--ink);
+  border-radius: 100px;
+  padding: 0.25rem;
+  background: var(--cream);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.p-pricing .toggle button {
+  border: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+.p-pricing .toggle button.on {
+  background: var(--ink);
+  color: var(--cream);
+}
+.p-pricing .toggle .save {
+  margin-left: 0.4rem;
+  background: var(--lime);
+  color: var(--ink);
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  font-size: 0.65rem;
+}
+
+.p-pricing section {
+  padding: 4rem 2rem;
+  border-bottom: 2px solid var(--ink);
+}
+.p-pricing .inner {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.p-pricing .tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 960px) {
+  .p-pricing .tiers {
+    grid-template-columns: 1fr;
+  }
+}
+.p-pricing .tier {
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+  position: relative;
+  transition: 0.15s;
+}
+.p-pricing .tier:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.p-pricing .tier.fea {
+  background: var(--ink);
+  color: var(--cream);
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--accent);
+}
+.p-pricing .tier.fea:hover {
+  box-shadow: 10px 10px 0 var(--accent);
+}
+.p-pricing .badge-pop {
+  position: absolute;
+  top: -12px;
+  right: 18px;
+  background: var(--accent);
+  color: var(--ink);
+  padding: 0.3rem 0.85rem;
+  border: 2px solid var(--ink);
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  transform: rotate(3deg);
+  border-radius: 4px;
+}
+.p-pricing .tier h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.p-pricing .tier .tag {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 1.25rem;
+}
+.p-pricing .price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px dashed currentColor;
+}
+.p-pricing .cur {
+  font-size: 1.2rem;
+  opacity: 0.65;
+}
+.p-pricing .num {
+  font-family: 'Fraunces', serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.p-pricing .per {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  margin-left: 0.2rem;
+}
+.p-pricing .tier ul {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.p-pricing .tier ul li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+}
+.p-pricing .tier ul li::before {
+  content: '→';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.p-pricing .tier.fea ul li::before {
+  color: var(--lime);
+}
+.p-pricing .tier .btn {
+  width: 100%;
+  justify-content: center;
+}
+.p-pricing .tier.fea .btn {
+  background: var(--accent);
+  color: var(--ink);
+  border-color: var(--accent);
+}
+.p-pricing .tier.fea .btn:hover {
+  background: var(--lime);
+  border-color: var(--lime);
+}
+
+.p-pricing .agency {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: var(--forest);
+  color: var(--cream);
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.p-pricing .agency h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.p-pricing .agency p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
+}
+.p-pricing .agency .price {
+  font-family: 'Fraunces', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.p-pricing .agency .price span {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.p-pricing .addons {
+  background: var(--cream);
+}
+.p-pricing .addons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .p-pricing .addons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.p-pricing .addon {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 1.2rem;
+}
+.p-pricing .addon h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.p-pricing .addon p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+  min-height: 42px;
+}
+.p-pricing .addon .cost {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.p-pricing .calc-section {
+  background: var(--paper-2);
+}
+.p-pricing .calc {
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 900px) {
+  .p-pricing .calc {
+    grid-template-columns: 1fr;
+  }
+}
+.p-pricing .calc-left .field {
+  margin-bottom: 1rem;
+}
+.p-pricing .calc-left input[type='range'] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.p-pricing .calc-right {
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.p-pricing .calc-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+  font-size: 0.9rem;
+}
+.p-pricing .calc-line.total {
+  border-bottom: none;
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.p-pricing .calc-line.total .c {
+  color: var(--lime);
+}
+
+.p-pricing .faq {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.p-pricing .faq details {
+  background: var(--cream);
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+.p-pricing .faq summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+.p-pricing .faq summary::-webkit-details-marker {
+  display: none;
+}
+.p-pricing .faq summary::after {
+  content: '+';
+  transition: 0.2s;
+}
+.p-pricing .faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+.p-pricing .faq p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.7rem;
+}

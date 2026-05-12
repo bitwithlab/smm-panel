@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — Agency · Clients</title><link rel="stylesheet" href="shared.css">
+<style>
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.5rem}
+@media(max-width:900px){.stat-row{grid-template-columns:repeat(2,1fr)}}
+.client-head{font-family:'Fraunces',serif;font-size:.95rem;font-weight:600}
+.mini-bar{height:6px;background:var(--paper-2);border:1px solid var(--ink);border-radius:3px;overflow:hidden}
+.mini-bar>div{height:100%;background:var(--accent)}
+.agency-banner{background:var(--forest);color:var(--cream);border-radius:14px;padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
+.agency-banner h3{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600}
+.agency-banner p{color:rgba(255,255,255,.7);font-size:.88rem;margin-top:.2rem}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow <span class="chip accent" style="font-size:.6rem;margin-left:.3rem">Agency</span></a>
+<div class="sb-group">Agency</div>
+<a href="agency-clients.html" class="sb-item active"><span class="sb-ico">◈</span>Clients<span class="chip" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">12</span></a>
+<a href="agency-whitelabel.html" class="sb-item"><span class="sb-ico">◇</span>White-label</a>
+<a href="agency-reports.html" class="sb-item"><span class="sb-ico">◫</span>Reports</a>
+<div class="sb-group">Workspace</div>
+<a href="app-overview.html" class="sb-item"><span class="sb-ico">◆</span>Overview</a>
+<a href="app-queue.html" class="sb-item"><span class="sb-ico">⎘</span>Queue</a>
+<a href="app-analytics.html" class="sb-item"><span class="sb-ico">◫</span>Analytics</a>
+<div class="sb-group">Account</div>
+<a href="app-billing.html" class="sb-item"><span class="sb-ico">৳</span>Billing</a>
+<a href="app-settings.html" class="sb-item"><span class="sb-ico">⚙</span>Settings</a>
+<div class="sb-foot"><div class="sb-avatar" style="background:var(--forest);color:var(--cream)">M</div><div><div style="font-weight:600">Mehedi · Orbit Agency</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Agency plan · 12 seats</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Agency</span><span class="sep">/</span><b>Clients</b></div>
+<div class="app-search">🔍<input placeholder="Search clients…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><button class="btn sm primary">+ Onboard client</button></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>Clients</h1><p>12 of unlimited workspaces · 284 total posts handled this month.</p></div><div class="page-head-actions"><button class="btn sm">Export</button><button class="btn sm primary">+ Onboard client</button></div></div>
+
+<div class="agency-banner">
+<div><h3>Orbit Agency · white-label dashboard</h3><p>Your clients log in at <b>orbit.engageflow.app</b> · 284 posts handled · ৳68,400 MRR across clients</p></div>
+<div style="display:flex;gap:.5rem"><a href="agency-whitelabel.html" class="btn sm" style="background:var(--lime);border-color:var(--lime)">Edit white-label</a><a href="agency-reports.html" class="btn sm ghost" style="color:var(--cream);border-color:rgba(255,255,255,.4)">Branded reports</a></div>
+</div>
+
+<div class="stat-row">
+<div class="stat accent"><div class="stat-lbl">Active clients</div><div class="stat-num">12</div><div class="stat-delta up">▲ 2 this month</div></div>
+<div class="stat lime"><div class="stat-lbl">Total MRR</div><div class="stat-num">৳68.4K</div><div class="stat-delta up">▲ 12%</div></div>
+<div class="stat"><div class="stat-lbl">Posts this month</div><div class="stat-num">284</div><div class="stat-delta">of 1,200 pooled</div></div>
+<div class="stat dark"><div class="stat-lbl">Avg first-hour</div><div class="stat-num">69%</div><div class="stat-delta up">▲ 4pts WoW</div></div>
+</div>
+
+<div class="card">
+<div class="card-head"><div><div class="card-title">Client workspaces</div><div class="card-sub">Login as any client · manage quotas · pause sub-accounts</div></div>
+<div style="display:flex;gap:.4rem"><span class="chip solid">All · 12</span><span class="chip">Active · 10</span><span class="chip">Paused · 2</span></div></div>
+
+<table class="tbl">
+<thead><tr><th>Client</th><th>Plan</th><th>Posts</th><th>Velocity</th><th>MRR</th><th>Status</th><th></th></tr></thead>
+<tbody>
+<tr><td><div class="client-head">Rahim Fashion House</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">rahim.engageflow.app</div></td><td><span class="chip">Standard</span></td><td><b>18 / 20</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:90%"></div></div></td><td><b style="color:var(--good)">71%</b></td><td>৳199</td><td><span class="chip dot">Active</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">Dhaka Bites Restaurant</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">dhakabites.engageflow.app</div></td><td><span class="chip">Basic</span></td><td><b>6 / 10</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:60%;background:var(--good)"></div></div></td><td><b>58%</b></td><td>৳99</td><td><span class="chip dot">Active</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">Nusrat Beauty Co.</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">nusratbeauty.engageflow.app</div></td><td><span class="chip accent">Ultra</span></td><td><b>24 / 30</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:80%"></div></div></td><td><b style="color:var(--good)">78%</b></td><td>৳399</td><td><span class="chip dot">Active</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">ChapkinBD</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">chapkinbd.engageflow.app</div></td><td><span class="chip">Standard</span></td><td><b>14 / 20</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:70%"></div></div></td><td><b>64%</b></td><td>৳199</td><td><span class="chip dot">Active</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">Ctg Street Food</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">ctgstreet.engageflow.app</div></td><td><span class="chip">Standard</span></td><td><b>11 / 20</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:55%"></div></div></td><td><b>61%</b></td><td>৳199</td><td><span class="chip dot">Active</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">Craft & Cotton</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">craftcotton.engageflow.app</div></td><td><span class="chip accent">Ultra</span></td><td><b>28 / 30</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:93%;background:var(--warn)"></div></div></td><td><b style="color:var(--good)">74%</b></td><td>৳399</td><td><span class="chip dot warn">Quota near</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">Sylhet Estates</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">sylhetestates.engageflow.app</div></td><td><span class="chip">Basic</span></td><td><b>4 / 10</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:40%"></div></div></td><td><b>52%</b></td><td>৳99</td><td><span class="chip dot">Active</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">LuxeDhaka</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">luxedhaka.engageflow.app</div></td><td><span class="chip">Standard</span></td><td><b>—</b></td><td>—</td><td>৳199</td><td><span class="chip dot idle">Paused</span></td><td><button class="btn sm">Resume</button></td></tr>
+
+<tr><td><div class="client-head">TechShop BD</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">techshopbd.engageflow.app</div></td><td><span class="chip accent">Ultra</span></td><td><b>19 / 30</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:63%"></div></div></td><td><b>67%</b></td><td>৳399</td><td><span class="chip dot">Active</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">Roots Bookstore</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">rootsbooks.engageflow.app</div></td><td><span class="chip">Basic</span></td><td><b>3 / 10</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:30%"></div></div></td><td><b>48%</b></td><td>৳99</td><td><span class="chip dot">Active</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">Daraz Seller · Runa</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">runa.engageflow.app</div></td><td><span class="chip">Standard</span></td><td><b>16 / 20</b><div class="mini-bar" style="margin-top:.3rem"><div style="width:80%"></div></div></td><td><b>65%</b></td><td>৳199</td><td><span class="chip dot">Active</span></td><td><button class="btn sm">Login as →</button></td></tr>
+
+<tr><td><div class="client-head">Momin Motors</div><div style="font-size:.75rem;color:var(--muted);font-family:'JetBrains Mono',monospace">moment.engageflow.app</div></td><td><span class="chip">Standard</span></td><td><b>—</b></td><td>—</td><td>৳199</td><td><span class="chip dot idle">Onboarding</span></td><td><button class="btn sm">Continue →</button></td></tr>
+</tbody></table>
+</div>
+
+</div></div></div></body></html>

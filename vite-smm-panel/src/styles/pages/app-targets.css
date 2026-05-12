@@ -1,0 +1,93 @@
+.p-targets .toolbar {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.p-targets .toolbar .chip {
+  cursor: pointer;
+}
+.p-targets .toolbar .sp {
+  flex: 1;
+}
+.p-targets .grid-targets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 1100px) {
+  .p-targets .grid-targets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .p-targets .grid-targets {
+    grid-template-columns: 1fr;
+  }
+}
+.p-targets .t-card {
+  background: var(--cream);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.p-targets .t-head {
+  padding: 1.1rem;
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+  border-bottom: 1px dashed var(--line-2);
+}
+.p-targets .t-head .plat {
+  width: 44px;
+  height: 44px;
+  font-size: 1.1rem;
+}
+.p-targets .t-body {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+.p-targets .row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+.p-targets .row .k {
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+}
+.p-targets .row .v {
+  font-weight: 600;
+}
+.p-targets .t-foot {
+  border-top: 1px dashed var(--line-2);
+  padding: 0.7rem 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--paper-2);
+}
+.p-targets .add-card {
+  border: 2px dashed var(--ink);
+  background: transparent;
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+  border-radius: 12px;
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+}
+.p-targets .add-card:hover {
+  background: var(--lime);
+  color: var(--ink);
+}

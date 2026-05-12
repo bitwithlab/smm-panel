@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EngageFlow — Queue</title><link rel="stylesheet" href="shared.css">
+<style>
+.q-grid{display:grid;grid-template-columns:320px 1fr;gap:1.25rem;min-height:700px}
+@media(max-width:1000px){.q-grid{grid-template-columns:1fr}}
+.q-list{background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.q-tabs{display:flex;border-bottom:1.5px solid var(--ink)}
+.q-tab{flex:1;text-align:center;padding:.7rem;font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:600;cursor:pointer;text-transform:uppercase;letter-spacing:.06em;border-right:1px solid var(--line)}
+.q-tab.active{background:var(--ink);color:var(--cream)}
+.q-tab:last-child{border-right:none}
+.q-items{overflow-y:auto;flex:1}
+.q-item{padding:.9rem 1rem;border-bottom:1px solid var(--line);cursor:pointer;display:flex;gap:.65rem;align-items:flex-start}
+.q-item:hover{background:var(--paper-2)}
+.q-item.on{background:var(--accent)}
+.q-item .plat{width:28px;height:28px;font-size:.75rem}
+.q-item .t{font-weight:600;font-size:.85rem}
+.q-item .m{font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-top:.15rem}
+.q-item.on .m{color:rgba(0,0,0,.65)}
+.q-item .tm{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)}
+.q-item.on .tm{color:rgba(0,0,0,.7)}
+
+.q-detail{background:var(--cream);border:1.5px solid var(--ink);border-radius:12px;padding:1.5rem;display:flex;flex-direction:column}
+.post-card{border:1.5px solid var(--ink);border-radius:10px;padding:1rem;background:var(--paper);margin-bottom:1.25rem}
+.post-head{display:flex;gap:.7rem;align-items:center;margin-bottom:.7rem}
+.post-body{font-size:.92rem;line-height:1.5}
+.post-stats{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.9rem}
+
+.drafts{margin-bottom:1.25rem}
+.drafts h4{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin-bottom:.6rem;display:flex;justify-content:space-between;align-items:center}
+.draft{background:var(--paper);border:1.5px solid var(--ink);border-radius:10px;padding:.9rem;margin-bottom:.5rem;display:flex;gap:.6rem;align-items:flex-start}
+.draft.on{background:var(--lime)}
+.draft-body{flex:1;font-size:.9rem}
+.draft .tone{display:block;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);margin-bottom:.3rem}
+.draft .acts{display:flex;gap:.35rem}
+
+.reply-box{border:1.5px solid var(--ink);border-radius:10px;background:var(--paper);padding:.9rem;margin-bottom:1rem}
+.reply-box textarea{width:100%;border:none;background:transparent;font-family:inherit;font-size:.92rem;resize:vertical;min-height:80px;outline:none}
+.reply-foot{display:flex;justify-content:space-between;align-items:center;padding-top:.7rem;border-top:1px dashed var(--line-2);font-size:.78rem;color:var(--muted)}
+.compose-actions{display:flex;gap:.5rem;margin-top:auto}
+</style></head><body class="grain"><div class="app">
+
+<aside class="sidebar">
+<a href="index.html" class="logo"><span class="logo-mark"></span>EngageFlow</a>
+<div class="sb-group">Workspace</div>
+<a href="app-overview.html" class="sb-item"><span class="sb-ico">◆</span>Overview</a>
+<a href="app-targets.html" class="sb-item"><span class="sb-ico">◎</span>Targets</a>
+<a href="app-queue.html" class="sb-item active"><span class="sb-ico">⎘</span>Response queue<span class="chip accent" style="margin-left:auto;font-size:.6rem;padding:.1rem .4rem">7</span></a>
+<a href="app-comments.html" class="sb-item"><span class="sb-ico">✎</span>Comment library</a>
+<div class="sb-group">Insights</div>
+<a href="app-analytics.html" class="sb-item"><span class="sb-ico">◫</span>Analytics</a>
+<a href="app-activity.html" class="sb-item"><span class="sb-ico">☰</span>Activity log</a>
+<div class="sb-group">Account</div>
+<a href="app-billing.html" class="sb-item"><span class="sb-ico">৳</span>Billing</a>
+<a href="app-settings.html" class="sb-item"><span class="sb-ico">⚙</span>Settings</a>
+<div class="sb-foot"><div class="sb-avatar">N</div><div><div style="font-weight:600">Nusrat J.</div><div style="font-size:.72rem;color:var(--muted);font-family:'JetBrains Mono',monospace">Standard plan</div></div></div>
+</aside>
+
+<div class="app-main">
+<div class="app-top">
+<div class="app-crumbs"><span>Workspace</span><span class="sep">/</span><b>Response queue</b></div>
+<div class="app-search">🔍<input placeholder="Filter queue…"></div>
+<div class="app-top-right"><button class="iconbtn">🔔</button><button class="btn sm ghost">Snooze all</button><button class="btn sm primary">Scan now</button></div>
+</div>
+
+<div class="app-body">
+<div class="page-head"><div><h1>Response queue</h1><p>7 posts awaiting review · next auto-scan in 04:12</p></div>
+<div class="page-head-actions"><button class="btn ghost sm">Filter</button><button class="btn sm">Sort: Urgency</button></div></div>
+
+<div class="q-grid">
+<div class="q-list">
+<div class="q-tabs"><div class="q-tab active">Needs reply · 7</div><div class="q-tab">Scheduled · 3</div><div class="q-tab">Sent · 42</div></div>
+<div class="q-items">
+
+<div class="q-item on"><div class="plat fb">f</div><div style="flex:1;min-width:0"><div class="t">"New summer drop just landed 🌸"</div><div class="m">@rahimfashionhouse · 184 reactions</div></div><div class="tm">42m</div></div>
+
+<div class="q-item"><div class="plat ig">◉</div><div style="flex:1;min-width:0"><div class="t">"Behind the scenes from the shoot…"</div><div class="m">@rahim.store.bd · 312 likes</div></div><div class="tm">2h</div></div>
+
+<div class="q-item"><div class="plat x">𝕏</div><div style="flex:1;min-width:0"><div class="t">"Free delivery inside Dhaka today"</div><div class="m">@rahim_live · 2.1K imp.</div></div><div class="tm">1h</div></div>
+
+<div class="q-item"><div class="plat fb">f</div><div style="flex:1;min-width:0"><div class="t">"Customer review roundup"</div><div class="m">@rahimfashionhouse · 96 reactions</div></div><div class="tm">6h</div></div>
+
+<div class="q-item"><div class="plat ig">◉</div><div style="flex:1;min-width:0"><div class="t">"New saree colors — which one?"</div><div class="m">@rahim.store.bd · 212 likes</div></div><div class="tm">4h</div></div>
+
+<div class="q-item"><div class="plat fb">f</div><div style="flex:1;min-width:0"><div class="t">"Eid sale preview 🎉"</div><div class="m">@rahimfashionhouse · 51 reactions</div></div><div class="tm">8h</div></div>
+
+<div class="q-item"><div class="plat ig">◉</div><div style="flex:1;min-width:0"><div class="t">"Styling tips reel"</div><div class="m">@rahim.store.bd · 486 plays</div></div><div class="tm">12h</div></div>
+
+</div>
+</div>
+
+<div class="q-detail">
+<div class="post-card">
+<div class="post-head"><div class="plat fb">f</div><div style="flex:1"><div style="font-weight:600">@rahimfashionhouse</div><div style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted)">Posted 42 min ago · id #fb_18472</div></div><span class="chip dot warn">First hour · 18min left</span></div>
+<div class="post-body">"New summer drop just landed 🌸 Three new colors in the signature saree line — pastel mint, midnight blue, and coral. In stock from today, 10am–10pm. Which color would you pick?"</div>
+<div class="post-stats">
+<span class="chip">👍 86</span><span class="chip">❤️ 52</span><span class="chip">😂 28</span><span class="chip">😮 18</span><span class="chip">💬 34 comments</span><span class="chip accent">Reach 6.2K</span>
+</div>
+</div>
+
+<div class="drafts">
+<h4>AI reply drafts <span class="badge">3 options · regenerate</span></h4>
+<div class="draft on"><div class="draft-body"><span class="tone">Warm · matches "friendly shopkeeper" voice</span>"Loving the color story on this drop — which one's the best-seller so far? Mint is catching our eye 💚"</div><div class="acts"><button class="btn sm">Edit</button><button class="btn sm primary">Use</button></div></div>
+<div class="draft"><div class="draft-body"><span class="tone">Info · transactional</span>"In stock in all three colors, all sizes. DM us for the price list and we'll send today."</div><div class="acts"><button class="btn sm">Edit</button><button class="btn sm">Use</button></div></div>
+<div class="draft"><div class="draft-body"><span class="tone">Playful · casual creator voice</span>"Mint mint mint. Someone please tell the coral to stop being so distracting 😤"</div><div class="acts"><button class="btn sm">Edit</button><button class="btn sm">Use</button></div></div>
+</div>
+
+<div class="reply-box">
+<textarea>Loving the color story on this drop — which one's the best-seller so far? Mint is catching our eye 💚</textarea>
+<div class="reply-foot"><span class="mono">94 chars · Bangla+English mix · brand voice: friendly</span><span class="chip dot">Within rate limit</span></div>
+</div>
+
+<div class="compose-actions">
+<button class="btn ghost">Save as draft</button>
+<button class="btn">Schedule</button>
+<button class="btn primary lg" style="flex:1">Approve & send →</button>
+</div>
+</div>
+</div>
+
+</div></div></div></body></html>

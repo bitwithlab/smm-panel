@@ -1,0 +1,32 @@
+.p-users .kpi-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 1100px) {
+  .p-users .kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.p-users .user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: white;
+  border: 1.5px solid var(--ink);
+}
+.p-users .filter-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.p-users .filter-row .sp {
+  flex: 1;
+}
